@@ -8,6 +8,8 @@
 
 %include "../include/matrix.h"
 
+%include "../include/libstructural.h"
+
 %inline
 %{
 #include "libstructural.h"
