@@ -1,0 +1,94 @@
+%module structural
+
+#pragma SWIG nowarn=516
+
+%include "carrays.i"
+%include "typemaps.i"
+%include "stl.i"
+
+%inline 
+%{
+#include "matrix.h"
+#include "libstructural.h"
+#include "util.h"
+%}
+
+%rename(assign) operator=;
+%rename(add) operator+;
+%rename(sub) operator-;
+%rename(div) operator/;
+%rename(mult) operator*;
+%ignore operator<<;
+%ignore operator();
+%ignore operator[];
+
+%ignore getReal;
+%ignore setReal;
+%ignore getImag;
+%ignore setImag;
+
+
+%template(StringVector) std::vector<std::string>;
+%template(DoubleVector) std::vector<double>;
+
+%include "complex.h"
+
+%array_class(LIB_LA::Complex, complexArray); 
+%array_class(double, doubleArray); 
+%array_class(int, intArray); 
+%array_function(LIB_LA::Complex, complexArray); 
+%array_function(double, doubleArray); 
+%array_function(int, intArray); 
+
+%include "matrix.h"
+
+%template(DoubleMatrix) LIB_LA::Matrix<double>;
+%template(IntMatrix) LIB_LA::Matrix<int>;
+%template(ComplexMatrix) LIB_LA::Matrix<LIB_LA::Complex>;
+
+#ifdef SWIGCSHARP
+%template(StringDouble) std::pair< std::string, double >;
+%template(StringDoubleVector) std::vector< std::pair< std::string, double > >;
+#endif
+
+%extend LIB_LA::Matrix<double>
+{
+	virtual double get(const unsigned int row, const unsigned int col)
+    {
+		return (*self)(row,col);
+	}
+	
+	virtual void set(const unsigned int row, const unsigned int col, double value)
+    {
+		(*self)(row,col) = value;
+	}
+}
+
+%extend LIB_LA::Matrix<int>
+{
+	virtual int get(const unsigned int row, const unsigned int col)
+    {
+		return (*self)(row,col);
+	}
+
+	virtual void set(const unsigned int row, const unsigned int col, int value)
+    {
+		(*self)(row,col) = value;
+	}
+}
+	
+%extend LIB_LA::Matrix<LIB_LA::Complex>
+{
+	virtual LIB_LA::Complex get(const unsigned int row, const unsigned int col)
+    {
+		return (*self)(row,col);
+	}
+	virtual void set(const unsigned int row, const unsigned int col, LIB_LA::Complex value)
+    {
+		(*self)(row,col) = value;
+	}
+
+}
+
+
+%include "libstructural.h"

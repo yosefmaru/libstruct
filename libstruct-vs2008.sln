@@ -1,0 +1,69 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibLAd", "LibLA\libla-vs2008.vcproj", "{5EF7D2A2-CCBD-3691-9223-29AA2E208459}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibStructurald", "LibStructural\libstructural-vs2008.vcproj", "{C5A84BA0-E4BB-3CA6-8775-CE5043E2AB64}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EA667B9-2056-301E-BE43-4027F6D6EDFD} = {6EA667B9-2056-301E-BE43-4027F6D6EDFD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SBW_CLAPACK", "SBW_CLAPACK\SBW_CLAPACK-vs2008.vcproj", "{EBB1615C-752E-3CD2-A57C-0B7274754AFE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SBW_Structural", "SBW_Structural\SBW_Structural-vs2008.vcproj", "{095A09C7-B936-3371-A3FC-5BC3E53F46B6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibLA-staticd", "LibLA-static\libla-vs2008-static.vcproj", "{6EA667B9-2056-301E-BE43-4027F6D6EDFD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibStructural-staticd", "LibStructural-static\libstructural-vs2008-static.vcproj", "{AFA60E2E-ADCC-325C-9922-0901C096628C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLibStruct", "TestLibStruct\TestLibStruct-vs2008.vcxproj", "{A6442247-E448-3366-B493-D5C03CF2813E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibStructuralCSharp", "LibStructuralCSharp\LibStructuralCSharp.csproj", "{5E70B656-6238-49CE-8758-E86DB5C8BC19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EF7D2A2-CCBD-3691-9223-29AA2E208459}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5EF7D2A2-CCBD-3691-9223-29AA2E208459}.Debug|Win32.Build.0 = Debug|Win32
+		{5EF7D2A2-CCBD-3691-9223-29AA2E208459}.Release|Win32.ActiveCfg = Release|Win32
+		{5EF7D2A2-CCBD-3691-9223-29AA2E208459}.Release|Win32.Build.0 = Release|Win32
+		{C5A84BA0-E4BB-3CA6-8775-CE5043E2AB64}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5A84BA0-E4BB-3CA6-8775-CE5043E2AB64}.Debug|Win32.Build.0 = Debug|Win32
+		{C5A84BA0-E4BB-3CA6-8775-CE5043E2AB64}.Release|Win32.ActiveCfg = Release|Win32
+		{C5A84BA0-E4BB-3CA6-8775-CE5043E2AB64}.Release|Win32.Build.0 = Release|Win32
+		{EBB1615C-752E-3CD2-A57C-0B7274754AFE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EBB1615C-752E-3CD2-A57C-0B7274754AFE}.Debug|Win32.Build.0 = Debug|Win32
+		{EBB1615C-752E-3CD2-A57C-0B7274754AFE}.Release|Win32.ActiveCfg = Release|Win32
+		{EBB1615C-752E-3CD2-A57C-0B7274754AFE}.Release|Win32.Build.0 = Release|Win32
+		{095A09C7-B936-3371-A3FC-5BC3E53F46B6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{095A09C7-B936-3371-A3FC-5BC3E53F46B6}.Debug|Win32.Build.0 = Debug|Win32
+		{095A09C7-B936-3371-A3FC-5BC3E53F46B6}.Release|Win32.ActiveCfg = Release|Win32
+		{095A09C7-B936-3371-A3FC-5BC3E53F46B6}.Release|Win32.Build.0 = Release|Win32
+		{6EA667B9-2056-301E-BE43-4027F6D6EDFD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6EA667B9-2056-301E-BE43-4027F6D6EDFD}.Debug|Win32.Build.0 = Debug|Win32
+		{6EA667B9-2056-301E-BE43-4027F6D6EDFD}.Release|Win32.ActiveCfg = Release|Win32
+		{6EA667B9-2056-301E-BE43-4027F6D6EDFD}.Release|Win32.Build.0 = Release|Win32
+		{AFA60E2E-ADCC-325C-9922-0901C096628C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AFA60E2E-ADCC-325C-9922-0901C096628C}.Debug|Win32.Build.0 = Debug|Win32
+		{AFA60E2E-ADCC-325C-9922-0901C096628C}.Release|Win32.ActiveCfg = Release|Win32
+		{AFA60E2E-ADCC-325C-9922-0901C096628C}.Release|Win32.Build.0 = Release|Win32
+		{A6442247-E448-3366-B493-D5C03CF2813E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6442247-E448-3366-B493-D5C03CF2813E}.Debug|Win32.Build.0 = Debug|Win32
+		{A6442247-E448-3366-B493-D5C03CF2813E}.Release|Win32.ActiveCfg = Release|Win32
+		{A6442247-E448-3366-B493-D5C03CF2813E}.Release|Win32.Build.0 = Release|Win32
+		{5E70B656-6238-49CE-8758-E86DB5C8BC19}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{5E70B656-6238-49CE-8758-E86DB5C8BC19}.Debug|Win32.Build.0 = Debug|Any CPU
+		{5E70B656-6238-49CE-8758-E86DB5C8BC19}.Release|Win32.ActiveCfg = Release|Any CPU
+		{5E70B656-6238-49CE-8758-E86DB5C8BC19}.Release|Win32.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F03DF57-CAAB-49FB-B2BA-076980C2C0EB}
+	EndGlobalSection
+EndGlobal
