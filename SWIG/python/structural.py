@@ -437,6 +437,16 @@ class IntMatrix(_object):
     def __call__(self, *args): return _structural.IntMatrix___call__(self, *args)
     def get(self, *args): return _structural.IntMatrix_get(self, *args)
     def set(self, *args): return _structural.IntMatrix_set(self, *args)
+    def toNumpy(self):
+    		import numpy as np
+    		result = np.zeros((self.numRows(), self.numCols()), dtype=np.int)
+    		for i in range(self.numRows()):
+    				for j in range(self.numCols()):
+    						result[i,j] = self.get(i,j)
+    		return result
+    def __repr__(self):
+    		return self.toNumpy().__repr__()
+
 IntMatrix_swigregister = _structural.IntMatrix_swigregister
 IntMatrix_swigregister(IntMatrix)
 
@@ -476,6 +486,16 @@ class ComplexMatrix(_object):
     def __call__(self, *args): return _structural.ComplexMatrix___call__(self, *args)
     def get(self, *args): return _structural.ComplexMatrix_get(self, *args)
     def set(self, *args): return _structural.ComplexMatrix_set(self, *args)
+    def toNumpy(self):
+    		import numpy as np
+    		result = np.zeros((self.numRows(), self.numCols()), dtype=np.complex_)
+    		for i in range(self.numRows()):
+    				for j in range(self.numCols()):
+    						result[i,j] = self.getReal(i,j) + self.getImag(i,j)*1j
+    		return result
+    def __repr__(self):
+    		return self.toNumpy().__repr__()
+
 ComplexMatrix_swigregister = _structural.ComplexMatrix_swigregister
 ComplexMatrix_swigregister(ComplexMatrix)
 

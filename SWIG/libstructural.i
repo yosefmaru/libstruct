@@ -94,6 +94,18 @@ using LIB_LA::Matrix;
     {
 		(*self)(row,col) = value;
 	}
+
+%pythoncode %{
+		def toNumpy(self):
+				import numpy as np
+				result = np.zeros((self.numRows(), self.numCols()), dtype=np.int)
+				for i in range(self.numRows()):
+						for j in range(self.numCols()):
+								result[i,j] = self.get(i,j)
+				return result
+		def __repr__(self):
+				return self.toNumpy().__repr__()
+%}
 }
 
 %extend LIB_LA::Matrix<LIB_LA::Complex>
@@ -102,9 +114,39 @@ using LIB_LA::Matrix;
     {
 		return (*self)(row,col);
 	}
+
+	virtual double getReal(const unsigned int row, const unsigned int col)
+    {
+		return (*self)(row,col).Real;
+	}
+	virtual double getImag(const unsigned int row, const unsigned int col)
+    {
+		return (*self)(row,col).Imag;
+	}
+
 	virtual void set(const unsigned int row, const unsigned int col, LIB_LA::Complex value)
     {
 		(*self)(row,col) = value;
 	}
 
+	virtual void setReal(const unsigned int row, const unsigned int col, double value)
+    {
+		(*self)(row,col).Real = value;
+	}
+	virtual void setImag(const unsigned int row, const unsigned int col, double value)
+    {
+		(*self)(row,col).Imag = value;
+	}
+
+%pythoncode %{
+		def toNumpy(self):
+				import numpy as np
+				result = np.zeros((self.numRows(), self.numCols()), dtype=np.complex_)
+				for i in range(self.numRows()):
+						for j in range(self.numCols()):
+								result[i,j] = self.getReal(i,j) + self.getImag(i,j)*1j
+				return result
+		def __repr__(self):
+				return self.toNumpy().__repr__()
+%}
 }
