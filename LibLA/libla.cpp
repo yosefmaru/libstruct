@@ -12,8 +12,10 @@
 #include "matrix.h"
 #include "util.h"
 
+extern "C" {
 #include "f2c.h"
 #include "clapack.h"
+}
 
 
 using namespace std;

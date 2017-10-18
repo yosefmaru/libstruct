@@ -2,7 +2,7 @@
 # CMake Build Script for the libstructural project
 #
 # Author: Frank T. Bergmann
-# 
+#
 
 cmake_minimum_required(VERSION 2.8)
 project(LibStructural)
@@ -21,7 +21,7 @@ include (CheckTypeSize)
 
 ####################################################################
 #
-# Set up version information, it might be better to just write it here 
+# Set up version information, it might be better to just write it here
 # rather than parsing VERSION.txt
 #
 SET(STRUCTURAL_VERSION_MAJOR 1)
@@ -36,7 +36,7 @@ SET(PACKAGE_VERSION "${STRUCTURAL_VERSION_MAJOR}.${STRUCTURAL_VERSION_MINOR}.${S
 ####################################################################
 #
 # the next lines configure the parameters for packaging the binaries
-# they can be invoked with: make package / nmake package or by using 
+# they can be invoked with: make package / nmake package or by using
 # cpack -G zip|deb|rpm|dmg|nsis
 #
 
@@ -51,14 +51,15 @@ SET(CPACK_PACKAGE_VERSION_MINOR "${STRUCTURAL_VERSION_MINOR}")
 SET(CPACK_PACKAGE_VERSION_PATCH "${STRUCTURAL_VERSION_PATCH}")
 INCLUDE(CPack)
 
-
+# Configuration options
+set (ENABLE_PYTHON_WRAPPER FALSE CACHE BOOL "Enable Python bindings")
 
 # set build type default
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build, options are: None (CMAKE_CXX_FLAGS or CMAKE_C_FLAGS are used), Debug, Release, RelWithDebInfo, MinSizeRel" FORCE )
 
 ###############################################################################
 #
-# list of additional files to link against. 
+# list of additional files to link against.
 #
 
 set(EXTRA_LIBS "" CACHE STRING "List of additional libraries to link against." )
@@ -68,79 +69,79 @@ set(EXTRA_LIBS "" CACHE STRING "List of additional libraries to link against." )
 #
 # Locate Libxml2 if needed
 #
-find_library(LIBSBML_LIBRARY 
+find_library(LIBSBML_LIBRARY
 	NAMES libsbml-static.lib libsbml.lib sbml
-	PATHS ${DEPENDENCY_DIR}/lib 
+	PATHS ${DEPENDENCY_DIR}/lib
 		  ${SBML_DIR}/lib
-		  /usr/lib /usr/local/lib 
-		  ${CMAKE_SOURCE_DIR} 
+		  /usr/lib /usr/local/lib
+		  ${CMAKE_SOURCE_DIR}
 		  ${CMAKE_SOURCE_DIR}/lib
     )
-	
+
 	find_path(LIBSBML_INCLUDE
-		NAMES sbml/SBase.h 
+		NAMES sbml/SBase.h
 		PATHS ${DEPENDENCY_DIR}/include
 			  ${SBML_DIR}/include
-			  /usr/include /usr/local/include 			  
-			  ${CMAKE_SOURCE_DIR}/include 
-			  )		
+			  /usr/include /usr/local/include
+			  ${CMAKE_SOURCE_DIR}/include
+			  )
 
 	set(STRUCTURAL_LIBS ${STRUCTURAL_LIBS} ${LIBSBML_LIBRARY})
-	include_directories(${LIBSBML_INCLUDE})	
+	include_directories(${LIBSBML_INCLUDE})
 
-find_library(SBW_LIBRARY 
-	NAMES SBW-static.lib SBW.lib SBW-static SBW 
-	PATHS ${DEPENDENCY_DIR}/lib 
+find_library(SBW_LIBRARY
+	NAMES SBW-static.lib SBW.lib SBW-static SBW
+	PATHS ${DEPENDENCY_DIR}/lib
 		  ${SBW_DIR}/lib
-		  /usr/lib /usr/local/lib 
-		  ${CMAKE_SOURCE_DIR} 
+		  /usr/lib /usr/local/lib
+		  ${CMAKE_SOURCE_DIR}
 		  ${CMAKE_SOURCE_DIR}/lib
     )
-	
+
 	find_path(SBW_INCLUDE
-		NAMES SBW/SBW.h 
+		NAMES SBW/SBW.h
 		PATHS ${DEPENDENCY_DIR}/include
 			  ${SBW_DIR}/include
-			  /usr/include /usr/local/include 			  
-			  ${CMAKE_SOURCE_DIR}/include 
-			  )		
+			  /usr/include /usr/local/include
+			  ${CMAKE_SOURCE_DIR}/include
+			  )
 
 	set(STRUCTURAL_LIBS ${STRUCTURAL_LIBS} ${LIBSBML_LIBRARY})
-	include_directories(${SBW_INCLUDE})	
+	include_directories(${SBW_INCLUDE})
 
-	find_library(CLAPACK_LIBRARY 
+	find_library(CLAPACK_LIBRARY
 	NAMES clapack.lib  clapack lapack
-	PATHS /usr/lib /usr/local/lib 
-		  ${CMAKE_SOURCE_DIR} 
+	PATHS /usr/lib /usr/local/lib
+		  ${CMAKE_SOURCE_DIR}
 		  ${CMAKE_SOURCE_DIR}/dependencies/lib
 		  ${CMAKE_SOURCE_DIR}/lib
     )
-	
+
 	set(CLAPACK_LIBS ${CLAPACK_LIBRARY})
 
-	find_library(CLAPACK_BLAS_LIBRARY 
+	find_library(CLAPACK_BLAS_LIBRARY
 		NAMES blas.lib blas
-		PATHS /usr/lib /usr/local/lib 
-			${CMAKE_SOURCE_DIR} 
+		PATHS /usr/lib /usr/local/lib
+			${CMAKE_SOURCE_DIR}
 			${CMAKE_SOURCE_DIR}/dependencies/lib
 			${CMAKE_SOURCE_DIR}/lib
     )
-	
+
 	set(CLAPACK_LIBS ${CLAPACK_LIBS} ${CLAPACK_BLAS_LIBRARY})
-	
-	find_library(CLAPACK_F2C_LIBRARY 
+
+	find_library(CLAPACK_F2C_LIBRARY
 		NAMES libf2c.lib f2c
-		PATHS /usr/lib /usr/local/lib 
-			${CMAKE_SOURCE_DIR} 
+		PATHS /usr/lib /usr/local/lib
+			${CMAKE_SOURCE_DIR}
 			${CMAKE_SOURCE_DIR}/dependencies/lib
 			${CMAKE_SOURCE_DIR}/lib
     )
-		
+
 	set(CLAPACK_LIBS ${CLAPACK_LIBS} ${CLAPACK_F2C_LIBRARY})
-	
+
 ####################################################################
 #
-# Need some variables set up, such as the name for the libSBML 
+# Need some variables set up, such as the name for the libSBML
 # library and the Path and file separator characters
 #
 
@@ -165,17 +166,17 @@ if(UNIX)
 		add_definitions(-DMACOSX -DDARWIN -DLINUX)
 		set(BUILD_DEFINITIONS "${BUILD_DEFINITIONS} -DMACOSX")
        # On OSX it is common to build universal binaries to support multiple
-        # processor architectures. The default behavior is not to build 
-        # multiple architectures, as most users might not need that. 
+        # processor architectures. The default behavior is not to build
+        # multiple architectures, as most users might not need that.
         option(ENABLE_UNIVERSAL "Create universal binaries on Mac OS X." OFF)
-        
+
         set(CMAKE_OSX_ARCHITECTURES "${CMAKE_OSX_ARCHITECTURES}" CACHE STRING
            "A semicolon-separated list of build architectures to be used.")
         if(ENABLE_UNIVERSAL)
             # if universal binaries are requested and none defined so far
-            # overwrite them with all three common architectures. If the user 
+            # overwrite them with all three common architectures. If the user
             # specified their own list of architectures do not touch!
-            if(CMAKE_OSX_ARCHITECTURES STREQUAL "")  
+            if(CMAKE_OSX_ARCHITECTURES STREQUAL "")
                 STRING(REGEX REPLACE "^.*MacOSX([0-9]*\\.[0-9]*)\\.sdk$" "\\1"
                        OSX_SDK_VERSION "${CMAKE_OSX_SYSROOT}")
                 if(OSX_SDK_VERSION  VERSION_EQUAL "10.7" )
@@ -202,7 +203,7 @@ else(UNIX)
       message(STATUS "Detected Intel Compiler")
       set(USING_INTEL TRUE)
     endif ()
-	
+
 	set(STRUCTURAL_LIBS ${STRUCTURAL_LIBS} ws2_32.lib)
  	add_definitions(-DWIN32 -DLIB_EXPORTS -DLIBLAX_EXPORTS)
  	set(BUILD_DEFINITIONS "${BUILD_DEFINITIONS} -DWIN32 -DLIB_EXPORTS -DLIBLAX_EXPORTS")
@@ -221,17 +222,17 @@ else(UNIX)
 			foreach(flag_var
 				CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
 				CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
-		
+
 				if(${flag_var} MATCHES "/MD")
 					string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
 				endif(${flag_var} MATCHES "/MD")
 			endforeach(flag_var)
 		add_definitions( -D_MT)
 		endif(WITH_STATIC_RUNTIME)
-	
+
 		file(GLOB WIN32_BINARIES ${CMAKE_SOURCE_DIR}/dependencies/bin/*.dll)
 		INSTALL(FILES ${WIN32_BINARIES} DESTINATION bin)
-		
+
 	elseif(CYGWIN)
 		add_definitions(-DCYGWIN)
 		set(BUILD_DEFINITIONS "${BUILD_DEFINITIONS} -DCYGWIN")
@@ -241,7 +242,7 @@ else(UNIX)
 			add_definitions(-DLIBXML_STATIC)
 		endif(WITH_LIBXML)
 	endif(MSVC OR USING_INTEL)
-	
+
 endif(UNIX)
 
 
