@@ -61,14 +61,26 @@ using LIB_LA::Matrix;
 %extend LIB_LA::Matrix<double>
 {
 	virtual double get(const unsigned int row, const unsigned int col)
-    {
-		return (*self)(row,col);
+  {
+		return *(self->_Array + row * self->_Cols + col);
 	}
 
 	virtual void set(const unsigned int row, const unsigned int col, double value)
-    {
+  {
 		(*self)(row,col) = value;
 	}
+
+%pythoncode %{
+		def toNumpy(self):
+				import numpy as np
+				result = np.zeros((self.numRows(), self.numCols()))
+				for i in range(self.numRows()):
+						for j in range(self.numCols()):
+								result[i,j] = self.get(i,j)
+				return result
+		def __repr__(self):
+				return self.toNumpy().__repr__()
+%}
 }
 
 %extend LIB_LA::Matrix<int>

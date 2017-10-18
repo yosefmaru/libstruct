@@ -358,6 +358,15 @@ class DoubleMatrix(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, DoubleMatrix, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["_Rows"] = _structural.DoubleMatrix__Rows_set
+    __swig_getmethods__["_Rows"] = _structural.DoubleMatrix__Rows_get
+    if _newclass:_Rows = _swig_property(_structural.DoubleMatrix__Rows_get, _structural.DoubleMatrix__Rows_set)
+    __swig_setmethods__["_Cols"] = _structural.DoubleMatrix__Cols_set
+    __swig_getmethods__["_Cols"] = _structural.DoubleMatrix__Cols_get
+    if _newclass:_Cols = _swig_property(_structural.DoubleMatrix__Cols_get, _structural.DoubleMatrix__Cols_set)
+    __swig_setmethods__["_Array"] = _structural.DoubleMatrix__Array_set
+    __swig_getmethods__["_Array"] = _structural.DoubleMatrix__Array_get
+    if _newclass:_Array = _swig_property(_structural.DoubleMatrix__Array_get, _structural.DoubleMatrix__Array_set)
     def __init__(self, *args): 
         this = _structural.new_DoubleMatrix(*args)
         try: self.this.append(this)
@@ -379,6 +388,16 @@ class DoubleMatrix(_object):
     def __call__(self, *args): return _structural.DoubleMatrix___call__(self, *args)
     def get(self, *args): return _structural.DoubleMatrix_get(self, *args)
     def set(self, *args): return _structural.DoubleMatrix_set(self, *args)
+    def toNumpy(self):
+    		import numpy as np
+    		result = np.zeros((self.numRows(), self.numCols()))
+    		for i in range(self.numRows()):
+    				for j in range(self.numCols()):
+    						result[i,j] = self.get(i,j)
+    		return result
+    def __repr__(self):
+    		return self.toNumpy().__repr__()
+
 DoubleMatrix_swigregister = _structural.DoubleMatrix_swigregister
 DoubleMatrix_swigregister(DoubleMatrix)
 
@@ -388,6 +407,15 @@ class IntMatrix(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, IntMatrix, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["_Rows"] = _structural.IntMatrix__Rows_set
+    __swig_getmethods__["_Rows"] = _structural.IntMatrix__Rows_get
+    if _newclass:_Rows = _swig_property(_structural.IntMatrix__Rows_get, _structural.IntMatrix__Rows_set)
+    __swig_setmethods__["_Cols"] = _structural.IntMatrix__Cols_set
+    __swig_getmethods__["_Cols"] = _structural.IntMatrix__Cols_get
+    if _newclass:_Cols = _swig_property(_structural.IntMatrix__Cols_get, _structural.IntMatrix__Cols_set)
+    __swig_setmethods__["_Array"] = _structural.IntMatrix__Array_set
+    __swig_getmethods__["_Array"] = _structural.IntMatrix__Array_get
+    if _newclass:_Array = _swig_property(_structural.IntMatrix__Array_get, _structural.IntMatrix__Array_set)
     def __init__(self, *args): 
         this = _structural.new_IntMatrix(*args)
         try: self.this.append(this)
@@ -418,6 +446,15 @@ class ComplexMatrix(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, ComplexMatrix, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["_Rows"] = _structural.ComplexMatrix__Rows_set
+    __swig_getmethods__["_Rows"] = _structural.ComplexMatrix__Rows_get
+    if _newclass:_Rows = _swig_property(_structural.ComplexMatrix__Rows_get, _structural.ComplexMatrix__Rows_set)
+    __swig_setmethods__["_Cols"] = _structural.ComplexMatrix__Cols_set
+    __swig_getmethods__["_Cols"] = _structural.ComplexMatrix__Cols_get
+    if _newclass:_Cols = _swig_property(_structural.ComplexMatrix__Cols_get, _structural.ComplexMatrix__Cols_set)
+    __swig_setmethods__["_Array"] = _structural.ComplexMatrix__Array_set
+    __swig_getmethods__["_Array"] = _structural.ComplexMatrix__Array_get
+    if _newclass:_Array = _swig_property(_structural.ComplexMatrix__Array_get, _structural.ComplexMatrix__Array_set)
     def __init__(self, *args): 
         this = _structural.new_ComplexMatrix(*args)
         try: self.this.append(this)

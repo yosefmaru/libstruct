@@ -5111,6 +5111,13 @@ SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
 }
 
 
+SWIGINTERNINLINE PyObject*
+  SWIG_From_unsigned_SS_int  (unsigned int value)
+{
+  return PyInt_FromSize_t((size_t) value);
+}
+
+
 SWIGINTERN int
 SWIG_AsVal_bool (PyObject *obj, bool *val)
 {
@@ -5121,15 +5128,8 @@ SWIG_AsVal_bool (PyObject *obj, bool *val)
   return SWIG_OK;
 }
 
-
-SWIGINTERNINLINE PyObject*
-  SWIG_From_unsigned_SS_int  (unsigned int value)
-{
-  return PyInt_FromSize_t((size_t) value);
-}
-
 SWIGINTERN double LIB_LA_Matrix_Sl_double_Sg__get(LIB_LA::Matrix< double > *self,unsigned int const row,unsigned int const col){
-		return (*self)(row,col);
+		return *(self->_Array + row * self->_Cols + col);
 	}
 SWIGINTERN void LIB_LA_Matrix_Sl_double_Sg__set(LIB_LA::Matrix< double > *self,unsigned int const row,unsigned int const col,double value){
 		(*self)(row,col) = value;
@@ -12270,6 +12270,162 @@ SWIGINTERN PyObject *intArray_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObj
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Rows_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:DoubleMatrix__Rows_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Rows_set" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleMatrix__Rows_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Rows = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Rows_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:DoubleMatrix__Rows_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Rows_get" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  result = (unsigned int) ((arg1)->_Rows);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Cols_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:DoubleMatrix__Cols_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Cols_set" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleMatrix__Cols_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Cols = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Cols_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:DoubleMatrix__Cols_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Cols_get" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  result = (unsigned int) ((arg1)->_Cols);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Array_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  double *arg2 = (double *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:DoubleMatrix__Array_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Array_set" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_double, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DoubleMatrix__Array_set" "', argument " "2"" of type '" "double *""'"); 
+  }
+  arg2 = reinterpret_cast< double * >(argp2);
+  if (arg1) (arg1)->_Array = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DoubleMatrix__Array_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< double > *arg1 = (LIB_LA::Matrix< double > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:DoubleMatrix__Array_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix__Array_get" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
+  result = (double *) ((arg1)->_Array);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   unsigned int arg1 ;
@@ -13427,6 +13583,162 @@ SWIGINTERN PyObject *DoubleMatrix_swigregister(PyObject *SWIGUNUSEDPARM(self), P
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_IntMatrix__Rows_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntMatrix__Rows_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Rows_set" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntMatrix__Rows_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Rows = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntMatrix__Rows_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntMatrix__Rows_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Rows_get" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  result = (unsigned int) ((arg1)->_Rows);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntMatrix__Cols_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntMatrix__Cols_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Cols_set" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntMatrix__Cols_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Cols = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntMatrix__Cols_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntMatrix__Cols_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Cols_get" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  result = (unsigned int) ((arg1)->_Cols);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntMatrix__Array_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  int *arg2 = (int *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntMatrix__Array_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Array_set" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_int, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IntMatrix__Array_set" "', argument " "2"" of type '" "int *""'"); 
+  }
+  arg2 = reinterpret_cast< int * >(argp2);
+  if (arg1) (arg1)->_Array = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntMatrix__Array_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< int > *arg1 = (LIB_LA::Matrix< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntMatrix__Array_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix__Array_get" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
+  result = (int *) ((arg1)->_Array);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   unsigned int arg1 ;
@@ -14583,6 +14895,162 @@ SWIGINTERN PyObject *IntMatrix_swigregister(PyObject *SWIGUNUSEDPARM(self), PyOb
   SWIG_TypeNewClientData(SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Rows_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ComplexMatrix__Rows_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Rows_set" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ComplexMatrix__Rows_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Rows = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Rows_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ComplexMatrix__Rows_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Rows_get" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  result = (unsigned int) ((arg1)->_Rows);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Cols_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ComplexMatrix__Cols_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Cols_set" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ComplexMatrix__Cols_set" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  if (arg1) (arg1)->_Cols = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Cols_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ComplexMatrix__Cols_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Cols_get" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  result = (unsigned int) ((arg1)->_Cols);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Array_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  LIB_LA::Complex *arg2 = (LIB_LA::Complex *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ComplexMatrix__Array_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Array_set" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_LIB_LA__Complex, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ComplexMatrix__Array_set" "', argument " "2"" of type '" "LIB_LA::Complex *""'"); 
+  }
+  arg2 = reinterpret_cast< LIB_LA::Complex * >(argp2);
+  if (arg1) (arg1)->_Array = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComplexMatrix__Array_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_LA::Matrix< LIB_LA::Complex > *arg1 = (LIB_LA::Matrix< LIB_LA::Complex > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  LIB_LA::Complex *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ComplexMatrix__Array_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix__Array_get" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
+  result = (LIB_LA::Complex *) ((arg1)->_Array);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
 
 SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
@@ -15929,6 +16397,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"intArray_cast", _wrap_intArray_cast, METH_VARARGS, NULL},
 	 { (char *)"intArray_frompointer", _wrap_intArray_frompointer, METH_VARARGS, NULL},
 	 { (char *)"intArray_swigregister", intArray_swigregister, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Rows_set", _wrap_DoubleMatrix__Rows_set, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Rows_get", _wrap_DoubleMatrix__Rows_get, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Cols_set", _wrap_DoubleMatrix__Cols_set, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Cols_get", _wrap_DoubleMatrix__Cols_get, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Array_set", _wrap_DoubleMatrix__Array_set, METH_VARARGS, NULL},
+	 { (char *)"DoubleMatrix__Array_get", _wrap_DoubleMatrix__Array_get, METH_VARARGS, NULL},
 	 { (char *)"new_DoubleMatrix", _wrap_new_DoubleMatrix, METH_VARARGS, NULL},
 	 { (char *)"DoubleMatrix_getArray", _wrap_DoubleMatrix_getArray, METH_VARARGS, NULL},
 	 { (char *)"DoubleMatrix_getCopy", _wrap_DoubleMatrix_getCopy, METH_VARARGS, NULL},
@@ -15947,6 +16421,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"DoubleMatrix_get", _wrap_DoubleMatrix_get, METH_VARARGS, NULL},
 	 { (char *)"DoubleMatrix_set", _wrap_DoubleMatrix_set, METH_VARARGS, NULL},
 	 { (char *)"DoubleMatrix_swigregister", DoubleMatrix_swigregister, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Rows_set", _wrap_IntMatrix__Rows_set, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Rows_get", _wrap_IntMatrix__Rows_get, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Cols_set", _wrap_IntMatrix__Cols_set, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Cols_get", _wrap_IntMatrix__Cols_get, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Array_set", _wrap_IntMatrix__Array_set, METH_VARARGS, NULL},
+	 { (char *)"IntMatrix__Array_get", _wrap_IntMatrix__Array_get, METH_VARARGS, NULL},
 	 { (char *)"new_IntMatrix", _wrap_new_IntMatrix, METH_VARARGS, NULL},
 	 { (char *)"IntMatrix_getArray", _wrap_IntMatrix_getArray, METH_VARARGS, NULL},
 	 { (char *)"IntMatrix_getCopy", _wrap_IntMatrix_getCopy, METH_VARARGS, NULL},
@@ -15965,6 +16445,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"IntMatrix_get", _wrap_IntMatrix_get, METH_VARARGS, NULL},
 	 { (char *)"IntMatrix_set", _wrap_IntMatrix_set, METH_VARARGS, NULL},
 	 { (char *)"IntMatrix_swigregister", IntMatrix_swigregister, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Rows_set", _wrap_ComplexMatrix__Rows_set, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Rows_get", _wrap_ComplexMatrix__Rows_get, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Cols_set", _wrap_ComplexMatrix__Cols_set, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Cols_get", _wrap_ComplexMatrix__Cols_get, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Array_set", _wrap_ComplexMatrix__Array_set, METH_VARARGS, NULL},
+	 { (char *)"ComplexMatrix__Array_get", _wrap_ComplexMatrix__Array_get, METH_VARARGS, NULL},
 	 { (char *)"new_ComplexMatrix", _wrap_new_ComplexMatrix, METH_VARARGS, NULL},
 	 { (char *)"ComplexMatrix_getArray", _wrap_ComplexMatrix_getArray, METH_VARARGS, NULL},
 	 { (char *)"ComplexMatrix_getCopy", _wrap_ComplexMatrix_getCopy, METH_VARARGS, NULL},
