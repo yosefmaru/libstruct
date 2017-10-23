@@ -98,6 +98,39 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _structural.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
+class StringDouble(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StringDouble, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, StringDouble, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _structural.new_StringDouble(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _structural.StringDouble_first_set
+    __swig_getmethods__["first"] = _structural.StringDouble_first_get
+    if _newclass:first = _swig_property(_structural.StringDouble_first_get, _structural.StringDouble_first_set)
+    __swig_setmethods__["second"] = _structural.StringDouble_second_set
+    __swig_getmethods__["second"] = _structural.StringDouble_second_get
+    if _newclass:second = _swig_property(_structural.StringDouble_second_get, _structural.StringDouble_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _structural.delete_StringDouble
+    __del__ = lambda self : None;
+StringDouble_swigregister = _structural.StringDouble_swigregister
+StringDouble_swigregister(StringDouble)
+
 class StrDoubleVector(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, StrDoubleVector, name, value)
@@ -144,94 +177,6 @@ class StrDoubleVector(_object):
     __del__ = lambda self : None;
 StrDoubleVector_swigregister = _structural.StrDoubleVector_swigregister
 StrDoubleVector_swigregister(StrDoubleVector)
-
-class LibStructural(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, LibStructural, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, LibStructural, name)
-    __repr__ = _swig_repr
-    def loadStoichiometryMatrix(self, *args): return _structural.LibStructural_loadStoichiometryMatrix(self, *args)
-    def loadSpecies(self, *args): return _structural.LibStructural_loadSpecies(self, *args)
-    def loadReactionNames(self, *args): return _structural.LibStructural_loadReactionNames(self, *args)
-    def loadSBML(self, *args): return _structural.LibStructural_loadSBML(self, *args)
-    def loadSBMLFromFile(self, *args): return _structural.LibStructural_loadSBMLFromFile(self, *args)
-    def loadSBMLwithTests(self, *args): return _structural.LibStructural_loadSBMLwithTests(self, *args)
-    def analyzeWithQR(self): return _structural.LibStructural_analyzeWithQR(self)
-    def analyzeWithLU(self): return _structural.LibStructural_analyzeWithLU(self)
-    def analyzeWithLUandRunTests(self): return _structural.LibStructural_analyzeWithLUandRunTests(self)
-    def analyzeWithFullyPivotedLU(self): return _structural.LibStructural_analyzeWithFullyPivotedLU(self)
-    def analyzeWithFullyPivotedLUwithTests(self): return _structural.LibStructural_analyzeWithFullyPivotedLUwithTests(self)
-    def getL0Matrix(self): return _structural.LibStructural_getL0Matrix(self)
-    def getL0MatrixLabels(self, *args): return _structural.LibStructural_getL0MatrixLabels(self, *args)
-    def getNrMatrix(self): return _structural.LibStructural_getNrMatrix(self)
-    def getNrMatrixLabels(self, *args): return _structural.LibStructural_getNrMatrixLabels(self, *args)
-    def getColumnReorderedNrMatrix(self): return _structural.LibStructural_getColumnReorderedNrMatrix(self)
-    def getColumnReorderedNrMatrixLabels(self, *args): return _structural.LibStructural_getColumnReorderedNrMatrixLabels(self, *args)
-    def getNICMatrix(self): return _structural.LibStructural_getNICMatrix(self)
-    def getNICMatrixLabels(self, *args): return _structural.LibStructural_getNICMatrixLabels(self, *args)
-    def getNDCMatrix(self): return _structural.LibStructural_getNDCMatrix(self)
-    def getNDCMatrixLabels(self, *args): return _structural.LibStructural_getNDCMatrixLabels(self, *args)
-    def getN0Matrix(self): return _structural.LibStructural_getN0Matrix(self)
-    def getN0MatrixLabels(self, *args): return _structural.LibStructural_getN0MatrixLabels(self, *args)
-    def getLinkMatrix(self): return _structural.LibStructural_getLinkMatrix(self)
-    def getLinkMatrixLabels(self, *args): return _structural.LibStructural_getLinkMatrixLabels(self, *args)
-    def getK0Matrix(self): return _structural.LibStructural_getK0Matrix(self)
-    def getK0MatrixLabels(self, *args): return _structural.LibStructural_getK0MatrixLabels(self, *args)
-    def getKMatrix(self): return _structural.LibStructural_getKMatrix(self)
-    def getKMatrixLabels(self, *args): return _structural.LibStructural_getKMatrixLabels(self, *args)
-    def getGammaMatrix(self): return _structural.LibStructural_getGammaMatrix(self)
-    def getGammaMatrixGJ(self, *args): return _structural.LibStructural_getGammaMatrixGJ(self, *args)
-    def findPositiveGammaMatrix(self, *args): return _structural.LibStructural_findPositiveGammaMatrix(self, *args)
-    def getGammaMatrixLabels(self, *args): return _structural.LibStructural_getGammaMatrixLabels(self, *args)
-    def getStoichiometryMatrix(self): return _structural.LibStructural_getStoichiometryMatrix(self)
-    def getStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getStoichiometryMatrixLabels(self, *args)
-    def getReorderedStoichiometryMatrix(self): return _structural.LibStructural_getReorderedStoichiometryMatrix(self)
-    def getReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getReorderedStoichiometryMatrixLabels(self, *args)
-    def getFullyReorderedStoichiometryMatrix(self): return _structural.LibStructural_getFullyReorderedStoichiometryMatrix(self)
-    def getFullyReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getFullyReorderedStoichiometryMatrixLabels(self, *args)
-    def getReorderedSpecies(self): return _structural.LibStructural_getReorderedSpecies(self)
-    def getSpecies(self): return _structural.LibStructural_getSpecies(self)
-    def getReorderedSpeciesNamesList(self): return _structural.LibStructural_getReorderedSpeciesNamesList(self)
-    def getIndependentSpecies(self): return _structural.LibStructural_getIndependentSpecies(self)
-    def getIndependentSpeciesNamesList(self): return _structural.LibStructural_getIndependentSpeciesNamesList(self)
-    def getDependentSpecies(self): return _structural.LibStructural_getDependentSpecies(self)
-    def getDependentSpeciesNamesList(self): return _structural.LibStructural_getDependentSpeciesNamesList(self)
-    def getReactions(self): return _structural.LibStructural_getReactions(self)
-    def getIndependentReactionIds(self): return _structural.LibStructural_getIndependentReactionIds(self)
-    def getDependentReactionIds(self): return _structural.LibStructural_getDependentReactionIds(self)
-    def getReactionsNamesList(self): return _structural.LibStructural_getReactionsNamesList(self)
-    def getReorderedReactions(self): return _structural.LibStructural_getReorderedReactions(self)
-    def getConservedLaws(self): return _structural.LibStructural_getConservedLaws(self)
-    def getConservedSums(self): return _structural.LibStructural_getConservedSums(self)
-    def getInitialConditions(self): return _structural.LibStructural_getInitialConditions(self)
-    def validateStructuralMatrices(self): return _structural.LibStructural_validateStructuralMatrices(self)
-    def getTestDetails(self): return _structural.LibStructural_getTestDetails(self)
-    def getModelName(self): return _structural.LibStructural_getModelName(self)
-    def getNumSpecies(self): return _structural.LibStructural_getNumSpecies(self)
-    def getNumIndSpecies(self): return _structural.LibStructural_getNumIndSpecies(self)
-    def getNumDepSpecies(self): return _structural.LibStructural_getNumDepSpecies(self)
-    def getNumReactions(self): return _structural.LibStructural_getNumReactions(self)
-    def getNumIndReactions(self): return _structural.LibStructural_getNumIndReactions(self)
-    def getNumDepReactions(self): return _structural.LibStructural_getNumDepReactions(self)
-    def getRank(self): return _structural.LibStructural_getRank(self)
-    def getNmatrixSparsity(self): return _structural.LibStructural_getNmatrixSparsity(self)
-    def setTolerance(self, *args): return _structural.LibStructural_setTolerance(self, *args)
-    def getTolerance(self): return _structural.LibStructural_getTolerance(self)
-    def __init__(self): 
-        this = _structural.new_LibStructural()
-        try: self.this.append(this)
-        except: self.this = this
-    __swig_getmethods__["getInstance"] = lambda x: _structural.LibStructural_getInstance
-    if _newclass:getInstance = staticmethod(_structural.LibStructural_getInstance)
-    __swig_destroy__ = _structural.delete_LibStructural
-    __del__ = lambda self : None;
-LibStructural_swigregister = _structural.LibStructural_swigregister
-LibStructural_swigregister(LibStructural)
-
-def LibStructural_getInstance():
-  return _structural.LibStructural_getInstance()
-LibStructural_getInstance = _structural.LibStructural_getInstance
 
 class StringVector(_object):
     __swig_setmethods__ = {}
@@ -326,6 +271,160 @@ class DoubleVector(_object):
     __del__ = lambda self : None;
 DoubleVector_swigregister = _structural.DoubleVector_swigregister
 DoubleVector_swigregister(DoubleVector)
+
+class StringVectorx2(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StringVectorx2, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, StringVectorx2, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _structural.new_StringVectorx2(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _structural.StringVectorx2_first_set
+    __swig_getmethods__["first"] = _structural.StringVectorx2_first_get
+    if _newclass:first = _swig_property(_structural.StringVectorx2_first_get, _structural.StringVectorx2_first_set)
+    __swig_setmethods__["second"] = _structural.StringVectorx2_second_set
+    __swig_getmethods__["second"] = _structural.StringVectorx2_second_get
+    if _newclass:second = _swig_property(_structural.StringVectorx2_second_get, _structural.StringVectorx2_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _structural.delete_StringVectorx2
+    __del__ = lambda self : None;
+StringVectorx2_swigregister = _structural.StringVectorx2_swigregister
+StringVectorx2_swigregister(StringVectorx2)
+
+class DoubleMatrixStringVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleMatrixStringVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DoubleMatrixStringVector, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _structural.new_DoubleMatrixStringVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _structural.DoubleMatrixStringVector_first_set
+    __swig_getmethods__["first"] = _structural.DoubleMatrixStringVector_first_get
+    if _newclass:first = _swig_property(_structural.DoubleMatrixStringVector_first_get, _structural.DoubleMatrixStringVector_first_set)
+    __swig_setmethods__["second"] = _structural.DoubleMatrixStringVector_second_set
+    __swig_getmethods__["second"] = _structural.DoubleMatrixStringVector_second_get
+    if _newclass:second = _swig_property(_structural.DoubleMatrixStringVector_second_get, _structural.DoubleMatrixStringVector_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _structural.delete_DoubleMatrixStringVector
+    __del__ = lambda self : None;
+DoubleMatrixStringVector_swigregister = _structural.DoubleMatrixStringVector_swigregister
+DoubleMatrixStringVector_swigregister(DoubleMatrixStringVector)
+
+class LibStructural(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, LibStructural, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, LibStructural, name)
+    __repr__ = _swig_repr
+    def loadStoichiometryMatrix(self, *args): return _structural.LibStructural_loadStoichiometryMatrix(self, *args)
+    def loadSpecies(self, *args): return _structural.LibStructural_loadSpecies(self, *args)
+    def loadReactionNames(self, *args): return _structural.LibStructural_loadReactionNames(self, *args)
+    def loadSBML(self, *args): return _structural.LibStructural_loadSBML(self, *args)
+    def loadSBMLFromFile(self, *args): return _structural.LibStructural_loadSBMLFromFile(self, *args)
+    def loadSBMLwithTests(self, *args): return _structural.LibStructural_loadSBMLwithTests(self, *args)
+    def analyzeWithQR(self): return _structural.LibStructural_analyzeWithQR(self)
+    def analyzeWithLU(self): return _structural.LibStructural_analyzeWithLU(self)
+    def analyzeWithLUandRunTests(self): return _structural.LibStructural_analyzeWithLUandRunTests(self)
+    def analyzeWithFullyPivotedLU(self): return _structural.LibStructural_analyzeWithFullyPivotedLU(self)
+    def analyzeWithFullyPivotedLUwithTests(self): return _structural.LibStructural_analyzeWithFullyPivotedLUwithTests(self)
+    def getL0Matrix(self): return _structural.LibStructural_getL0Matrix(self)
+    def getL0MatrixLabels(self, *args): return _structural.LibStructural_getL0MatrixLabels(self, *args)
+    def getNrMatrix(self): return _structural.LibStructural_getNrMatrix(self)
+    def getNrMatrixLabels(self, *args): return _structural.LibStructural_getNrMatrixLabels(self, *args)
+    def getColumnReorderedNrMatrix(self): return _structural.LibStructural_getColumnReorderedNrMatrix(self)
+    def getNICMatrix(self): return _structural.LibStructural_getNICMatrix(self)
+    def getNICMatrixLabels(self, *args): return _structural.LibStructural_getNICMatrixLabels(self, *args)
+    def getNDCMatrix(self): return _structural.LibStructural_getNDCMatrix(self)
+    def getNDCMatrixLabels(self, *args): return _structural.LibStructural_getNDCMatrixLabels(self, *args)
+    def getN0Matrix(self): return _structural.LibStructural_getN0Matrix(self)
+    def getN0MatrixLabels(self, *args): return _structural.LibStructural_getN0MatrixLabels(self, *args)
+    def getLinkMatrix(self): return _structural.LibStructural_getLinkMatrix(self)
+    def getLinkMatrixLabels(self, *args): return _structural.LibStructural_getLinkMatrixLabels(self, *args)
+    def getK0Matrix(self): return _structural.LibStructural_getK0Matrix(self)
+    def getK0MatrixLabels(self, *args): return _structural.LibStructural_getK0MatrixLabels(self, *args)
+    def getKMatrix(self): return _structural.LibStructural_getKMatrix(self)
+    def getKMatrixLabels(self, *args): return _structural.LibStructural_getKMatrixLabels(self, *args)
+    def getGammaMatrix(self): return _structural.LibStructural_getGammaMatrix(self)
+    def getGammaMatrixGJ(self, *args): return _structural.LibStructural_getGammaMatrixGJ(self, *args)
+    def getGammaMatrixLabels(self, *args): return _structural.LibStructural_getGammaMatrixLabels(self, *args)
+    def getStoichiometryMatrix(self): return _structural.LibStructural_getStoichiometryMatrix(self)
+    def getStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getStoichiometryMatrixLabels(self, *args)
+    def getReorderedStoichiometryMatrix(self): return _structural.LibStructural_getReorderedStoichiometryMatrix(self)
+    def getReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getReorderedStoichiometryMatrixLabels(self, *args)
+    def getFullyReorderedStoichiometryMatrix(self): return _structural.LibStructural_getFullyReorderedStoichiometryMatrix(self)
+    def getFullyReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getFullyReorderedStoichiometryMatrixLabels(self, *args)
+    def getReorderedSpecies(self): return _structural.LibStructural_getReorderedSpecies(self)
+    def getSpecies(self): return _structural.LibStructural_getSpecies(self)
+    def getReorderedSpeciesNamesList(self): return _structural.LibStructural_getReorderedSpeciesNamesList(self)
+    def getIndependentSpecies(self): return _structural.LibStructural_getIndependentSpecies(self)
+    def getIndependentSpeciesNamesList(self): return _structural.LibStructural_getIndependentSpeciesNamesList(self)
+    def getDependentSpecies(self): return _structural.LibStructural_getDependentSpecies(self)
+    def getDependentSpeciesNamesList(self): return _structural.LibStructural_getDependentSpeciesNamesList(self)
+    def getReactions(self): return _structural.LibStructural_getReactions(self)
+    def getIndependentReactionIds(self): return _structural.LibStructural_getIndependentReactionIds(self)
+    def getDependentReactionIds(self): return _structural.LibStructural_getDependentReactionIds(self)
+    def getReactionsNamesList(self): return _structural.LibStructural_getReactionsNamesList(self)
+    def getReorderedReactions(self): return _structural.LibStructural_getReorderedReactions(self)
+    def getConservedLaws(self): return _structural.LibStructural_getConservedLaws(self)
+    def getConservedSums(self): return _structural.LibStructural_getConservedSums(self)
+    def getInitialConditions(self): return _structural.LibStructural_getInitialConditions(self)
+    def validateStructuralMatrices(self): return _structural.LibStructural_validateStructuralMatrices(self)
+    def getTestDetails(self): return _structural.LibStructural_getTestDetails(self)
+    def getModelName(self): return _structural.LibStructural_getModelName(self)
+    def getNumSpecies(self): return _structural.LibStructural_getNumSpecies(self)
+    def getNumIndSpecies(self): return _structural.LibStructural_getNumIndSpecies(self)
+    def getNumDepSpecies(self): return _structural.LibStructural_getNumDepSpecies(self)
+    def getNumReactions(self): return _structural.LibStructural_getNumReactions(self)
+    def getNumIndReactions(self): return _structural.LibStructural_getNumIndReactions(self)
+    def getNumDepReactions(self): return _structural.LibStructural_getNumDepReactions(self)
+    def getRank(self): return _structural.LibStructural_getRank(self)
+    def getNmatrixSparsity(self): return _structural.LibStructural_getNmatrixSparsity(self)
+    def setTolerance(self, *args): return _structural.LibStructural_setTolerance(self, *args)
+    def getTolerance(self): return _structural.LibStructural_getTolerance(self)
+    def __init__(self): 
+        this = _structural.new_LibStructural()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_getmethods__["getInstance"] = lambda x: _structural.LibStructural_getInstance
+    if _newclass:getInstance = staticmethod(_structural.LibStructural_getInstance)
+    def findPositiveGammaMatrix(self, *args): return _structural.LibStructural_findPositiveGammaMatrix(self, *args)
+    def getColumnReorderedNrMatrixLabels(self): return _structural.LibStructural_getColumnReorderedNrMatrixLabels(self)
+    __swig_destroy__ = _structural.delete_LibStructural
+    __del__ = lambda self : None;
+LibStructural_swigregister = _structural.LibStructural_swigregister
+LibStructural_swigregister(LibStructural)
+
+def LibStructural_getInstance():
+  return _structural.LibStructural_getInstance()
+LibStructural_getInstance = _structural.LibStructural_getInstance
 
 class complexArray(_object):
     __swig_setmethods__ = {}

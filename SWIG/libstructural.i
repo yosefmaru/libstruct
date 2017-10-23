@@ -13,10 +13,32 @@
 %include "typemaps.i"
 %include "stl.i"
 
-%template() std::pair<std::string,double>;
+%template(StringDouble) std::pair<std::string,double>;
 %template(StrDoubleVector) std::vector< std::pair<std::string,double> >;
+%template(StringVector) std::vector<std::string>;
+%template(DoubleVector) std::vector<double>;
+%template(StringVectorx2) std::pair< std::vector<std::string>, std::vector<std::string> >;
 
 %include "../include/matrix.h"
+
+%template(DoubleMatrixStringVector) std::pair<LIB_LA::DoubleMatrix*,  std::vector< std::string> >;
+
+// http://swig.10945.n7.nabble.com/replacing-a-real-class-method-with-SWIG-version-td11418.html
+%extend LIB_STRUCTURAL::LibStructural {
+	std::pair<LIB_LA::DoubleMatrix*,  std::vector< std::string> > findPositiveGammaMatrix(LIB_LA::DoubleMatrix* stoichiometry, std::vector< std::string> rowLabels) {
+		return std::make_pair(self->findPositiveGammaMatrix(*stoichiometry, rowLabels), rowLabels);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getColumnReorderedNrMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getColumnReorderedNrMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+}
+
+%ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
+%ignore LIB_STRUCTURAL::LibStructural::getColumnReorderedNrMatrixLabels;
 
 %include "../include/libstructural.h"
 
@@ -35,8 +57,6 @@
 %ignore setImag;
 
 
-%template(StringVector) std::vector<std::string>;
-%template(DoubleVector) std::vector<double>;
 
 %inline
 %{
@@ -56,10 +76,10 @@ using LIB_LA::Matrix;
 %template(IntMatrix) LIB_LA::Matrix<int>;
 %template(ComplexMatrix) LIB_LA::Matrix<LIB_LA::Complex>;
 
-#ifdef SWIGCSHARP
-%template(StringDouble) std::pair< std::string, double >;
-%template(StringDoubleVector) std::vector< std::pair< std::string, double > >;
-#endif
+// #ifdef SWIGCSHARP
+// %template(StringDouble) std::pair< std::string, double >;
+// %template(StringDoubleVector) std::vector< std::pair< std::string, double > >;
+// #endif
 
 %extend LIB_LA::Matrix<double>
 {
