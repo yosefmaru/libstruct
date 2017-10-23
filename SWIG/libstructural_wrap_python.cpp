@@ -5300,6 +5300,12 @@ SWIGINTERN std::pair< std::vector< std::string,std::allocator< std::string > >,s
 		self->getColumnReorderedNrMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
+SWIGINTERN std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > LIB_STRUCTURAL_LibStructural_getGammaMatrixLabels(LIB_STRUCTURAL::LibStructural *self){
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getGammaMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
 
 #include "..\include\complex.h"
 
@@ -13747,51 +13753,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_LibStructural_getGammaMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
-  std::vector< std::string,std::allocator< std::string > > *arg2 = 0 ;
-  std::vector< std::string,std::allocator< std::string > > *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:LibStructural_getGammaMatrixLabels",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
-  }
-  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
-  }
-  arg2 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
-  }
-  arg3 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp3);
-  (arg1)->getGammaMatrixLabels(*arg2,*arg3);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_LibStructural_getStoichiometryMatrix(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
@@ -14700,6 +14661,28 @@ SWIGINTERN PyObject *_wrap_LibStructural_getColumnReorderedNrMatrixLabels(PyObje
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
   result = LIB_STRUCTURAL_LibStructural_getColumnReorderedNrMatrixLabels(arg1);
+  resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_LibStructural_getGammaMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:LibStructural_getGammaMatrixLabels",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
+  result = LIB_STRUCTURAL_LibStructural_getGammaMatrixLabels(arg1);
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -19355,7 +19338,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_getKMatrixLabels", _wrap_LibStructural_getKMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getGammaMatrix", _wrap_LibStructural_getGammaMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getGammaMatrixGJ", _wrap_LibStructural_getGammaMatrixGJ, METH_VARARGS, NULL},
-	 { (char *)"LibStructural_getGammaMatrixLabels", _wrap_LibStructural_getGammaMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getStoichiometryMatrix", _wrap_LibStructural_getStoichiometryMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getStoichiometryMatrixLabels", _wrap_LibStructural_getStoichiometryMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getReorderedStoichiometryMatrix", _wrap_LibStructural_getReorderedStoichiometryMatrix, METH_VARARGS, NULL},
@@ -19394,6 +19376,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_getInstance", _wrap_LibStructural_getInstance, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_findPositiveGammaMatrix", _wrap_LibStructural_findPositiveGammaMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getColumnReorderedNrMatrixLabels", _wrap_LibStructural_getColumnReorderedNrMatrixLabels, METH_VARARGS, NULL},
+	 { (char *)"LibStructural_getGammaMatrixLabels", _wrap_LibStructural_getGammaMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"delete_LibStructural", _wrap_delete_LibStructural, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_swigregister", LibStructural_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_complexArray", _wrap_new_complexArray, METH_VARARGS, NULL},

@@ -374,7 +374,6 @@ class LibStructural(_object):
     def getKMatrixLabels(self, *args): return _structural.LibStructural_getKMatrixLabels(self, *args)
     def getGammaMatrix(self): return _structural.LibStructural_getGammaMatrix(self)
     def getGammaMatrixGJ(self, *args): return _structural.LibStructural_getGammaMatrixGJ(self, *args)
-    def getGammaMatrixLabels(self, *args): return _structural.LibStructural_getGammaMatrixLabels(self, *args)
     def getStoichiometryMatrix(self): return _structural.LibStructural_getStoichiometryMatrix(self)
     def getStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getStoichiometryMatrixLabels(self, *args)
     def getReorderedStoichiometryMatrix(self): return _structural.LibStructural_getReorderedStoichiometryMatrix(self)
@@ -417,6 +416,7 @@ class LibStructural(_object):
     if _newclass:getInstance = staticmethod(_structural.LibStructural_getInstance)
     def findPositiveGammaMatrix(self, *args): return _structural.LibStructural_findPositiveGammaMatrix(self, *args)
     def getColumnReorderedNrMatrixLabels(self): return _structural.LibStructural_getColumnReorderedNrMatrixLabels(self)
+    def getGammaMatrixLabels(self): return _structural.LibStructural_getGammaMatrixLabels(self)
     __swig_destroy__ = _structural.delete_LibStructural
     __del__ = lambda self : None;
 LibStructural_swigregister = _structural.LibStructural_swigregister

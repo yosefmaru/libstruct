@@ -35,10 +35,18 @@
 		self->getColumnReorderedNrMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getGammaMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getGammaMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
 }
 
 %ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
 %ignore LIB_STRUCTURAL::LibStructural::getColumnReorderedNrMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getGammaMatrixLabels;
 
 %include "../include/libstructural.h"
 
