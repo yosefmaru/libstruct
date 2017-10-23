@@ -2,20 +2,23 @@
 
 // #pragma SWIG nowarn=516
 
-%include "carrays.i"
-%include "typemaps.i"
-%include "stl.i"
-
-%include "../include/matrix.h"
-
-%include "../include/libstructural.h"
-
 %inline
 %{
 #include "libstructural.h"
 #include "util.h"
 #include "libla.h"
 %}
+
+%include "carrays.i"
+%include "typemaps.i"
+%include "stl.i"
+
+%template() std::pair<std::string,double>;
+%template(StrDoubleVector) std::vector< std::pair<std::string,double> >;
+
+%include "../include/matrix.h"
+
+%include "../include/libstructural.h"
 
 %rename(assign) operator=;
 %rename(add) operator+;
@@ -150,3 +153,16 @@ using LIB_LA::Matrix;
 				return self.toNumpy().__repr__()
 %}
 }
+
+// %ignore LIB_STRUCTURAL::LibStructural::getInitialConditions;
+// %rename (_getInitialConditions) LIB_STRUCTURAL::LibStructural::getInitialConditions;
+
+/*%extend LIB_STRUCTURAL::LibStructural {
+	std::vector< std::pair<std::string, double> > _getInitialConditions() {
+		return *self->getInitialConditions();
+	}
+%pythoncode %{
+		def getInitialConditions(*args):
+				return _getInitialConditions(*args)
+%}
+}*/
