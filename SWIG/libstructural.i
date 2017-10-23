@@ -42,11 +42,19 @@
 		self->getGammaMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getK0MatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getK0MatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
 }
 
 %ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
 %ignore LIB_STRUCTURAL::LibStructural::getColumnReorderedNrMatrixLabels;
 %ignore LIB_STRUCTURAL::LibStructural::getGammaMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getK0MatrixLabels;
 
 %include "../include/libstructural.h"
 
