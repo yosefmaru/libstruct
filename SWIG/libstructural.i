@@ -49,12 +49,83 @@
 		self->getK0MatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getKMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getKMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getL0MatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getL0MatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getLinkMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getLinkMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getLinkMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getLinkMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getN0MatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getN0MatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getNDCMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getNDCMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getNICMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getNICMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getNrMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getNrMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
+
+	std::pair< std::vector<std::string>, std::vector<std::string> > getStoichiometryMatrixLabels() {
+		std::vector<std::string> rows;
+		std::vector<std::string> cols;
+		self->getStoichiometryMatrixLabels(rows, cols);
+		return std::make_pair(rows, cols);
+	}
 }
 
 %ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
 %ignore LIB_STRUCTURAL::LibStructural::getColumnReorderedNrMatrixLabels;
 %ignore LIB_STRUCTURAL::LibStructural::getGammaMatrixLabels;
 %ignore LIB_STRUCTURAL::LibStructural::getK0MatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getKMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getL0MatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getLinkMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getN0MatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getNDCMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getNICMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getNrMatrixLabels;
+%ignore LIB_STRUCTURAL::LibStructural::getStoichiometryMatrixLabels;
 
 %include "../include/libstructural.h"
 
