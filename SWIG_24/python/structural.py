@@ -347,7 +347,7 @@ class LibStructural(_object):
     def loadStoichiometryMatrix(self, *args): return _structural.LibStructural_loadStoichiometryMatrix(self, *args)
     def loadSpecies(self, *args): return _structural.LibStructural_loadSpecies(self, *args)
     def loadReactionNames(self, *args): return _structural.LibStructural_loadReactionNames(self, *args)
-    def loadSBMLFromString(self, *args): return _structural.LibStructural_loadSBMLFromString(self, *args)
+    def loadSBML(self, *args): return _structural.LibStructural_loadSBML(self, *args)
     def loadSBMLFromFile(self, *args): return _structural.LibStructural_loadSBMLFromFile(self, *args)
     def loadSBMLwithTests(self, *args): return _structural.LibStructural_loadSBMLwithTests(self, *args)
     def analyzeWithQR(self): return _structural.LibStructural_analyzeWithQR(self)
@@ -357,7 +357,6 @@ class LibStructural(_object):
     def analyzeWithFullyPivotedLUwithTests(self): return _structural.LibStructural_analyzeWithFullyPivotedLUwithTests(self)
     def getL0Matrix(self): return _structural.LibStructural_getL0Matrix(self)
     def getNrMatrix(self): return _structural.LibStructural_getNrMatrix(self)
-    def getFullyReorderedNrMatrix(self): return _structural.LibStructural_getFullyReorderedNrMatrix(self)
     def getColumnReorderedNrMatrix(self): return _structural.LibStructural_getColumnReorderedNrMatrix(self)
     def getNICMatrix(self): return _structural.LibStructural_getNICMatrix(self)
     def getNDCMatrix(self): return _structural.LibStructural_getNDCMatrix(self)
@@ -369,7 +368,9 @@ class LibStructural(_object):
     def getGammaMatrixGJ(self, *args): return _structural.LibStructural_getGammaMatrixGJ(self, *args)
     def getStoichiometryMatrix(self): return _structural.LibStructural_getStoichiometryMatrix(self)
     def getReorderedStoichiometryMatrix(self): return _structural.LibStructural_getReorderedStoichiometryMatrix(self)
+    def getReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getReorderedStoichiometryMatrixLabels(self, *args)
     def getFullyReorderedStoichiometryMatrix(self): return _structural.LibStructural_getFullyReorderedStoichiometryMatrix(self)
+    def getFullyReorderedStoichiometryMatrixLabels(self, *args): return _structural.LibStructural_getFullyReorderedStoichiometryMatrixLabels(self, *args)
     def getReorderedSpecies(self): return _structural.LibStructural_getReorderedSpecies(self)
     def getSpecies(self): return _structural.LibStructural_getSpecies(self)
     def getReorderedSpeciesNamesList(self): return _structural.LibStructural_getReorderedSpeciesNamesList(self)
@@ -416,8 +417,6 @@ class LibStructural(_object):
     def getNICMatrixLabels(self): return _structural.LibStructural_getNICMatrixLabels(self)
     def getNrMatrixLabels(self): return _structural.LibStructural_getNrMatrixLabels(self)
     def getStoichiometryMatrixLabels(self): return _structural.LibStructural_getStoichiometryMatrixLabels(self)
-    def getFullyReorderedStoichiometryMatrixLabels(self): return _structural.LibStructural_getFullyReorderedStoichiometryMatrixLabels(self)
-    def getReorderedStoichiometryMatrixLabels(self): return _structural.LibStructural_getReorderedStoichiometryMatrixLabels(self)
     __swig_destroy__ = _structural.delete_LibStructural
     __del__ = lambda self : None;
 LibStructural_swigregister = _structural.LibStructural_swigregister
@@ -645,28 +644,6 @@ class ComplexMatrix(_object):
 
 ComplexMatrix_swigregister = _structural.ComplexMatrix_swigregister
 ComplexMatrix_swigregister(ComplexMatrix)
-
-def getFullyReorderedN0StoichiometryMatrix(self):
-	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-	N_rowLen = len(N)
-	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-	Nr_rowLen = len(Nr)
-	N0_rowLen = N_rowLen - Nr_rowLen
-	N0StoichMrx = StoichMrx[0:N0_rowLen]
-	return N0StoichMrx
-def __repr__(self):
-		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
-
-def getFullyReorderedN0StoichiometryMatrix(self):
-	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-	N_rowLen = len(N)
-	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-	Nr_rowLen = len(Nr)
-	N0_rowLen = N_rowLen - Nr_rowLen
-	N0StoichMrx = StoichMrx[0:N0_rowLen]
-	return N0StoichMrx
-def __repr__(self):
-		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
 
 # This file is compatible with both classic and new-style classes.
 

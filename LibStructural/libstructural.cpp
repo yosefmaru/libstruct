@@ -29,7 +29,7 @@ using namespace std;
 
 #ifndef NO_SBML
 // ----------------------------------------------------------------------------------------	
-// string loadSBML(string)
+// string loadSBMLFromString(string)
 // 
 // This is the main method that the users should run their models with. The method takes
 // the SBML file as an input (string). This could be in SBML level 1 or SBML level 2 format.
@@ -39,10 +39,20 @@ using namespace std;
 // of the analysis are output as a string and are also accessible from other methods in
 // the API.
 // ----------------------------------------------------------------------------------------	
-string LibStructural::loadSBML(string sSBML)
-{		
-	DELETE_IF_NON_NULL(_Model);		_Model = new SBMLmodel(sSBML);
-	return analyzeWithQR();
+string LibStructural::loadSBMLFromString(string sSBML)
+{	
+	try
+	{
+		DELETE_IF_NON_NULL(_Model);
+		_Model = new SBMLmodel(sSBML);
+		return analyzeWithQR();
+	}
+	//catch (ApplicationException m)
+	catch (...)
+	{
+		//std::string s = m.getDetailedMessage();
+		return "";
+	}
 }
 
 string LibStructural::loadSBMLFromFile(string sFileName)
@@ -1083,6 +1093,13 @@ LibStructural::DoubleMatrix* LibStructural::getNrMatrix()
 	return _Nr;
 }
 
+LibStructural::DoubleMatrix* LibStructural::getFullyReorderedNrMatrix()
+{
+	getFullyReorderedStoichiometryMatrix();
+	computeNrMatrix();
+	return _Nr;
+}
+
 void LibStructural::getNrMatrixLabels(vector< string > &oRows, vector< string > &oCols )
 {
 	oRows = getIndependentSpecies();
@@ -2074,11 +2091,11 @@ LIB_EXTERN  int LibStructural_loadReactionNames ( const char** reactionNames, co
 #ifndef NO_SBML
 
 // Initialization method, takes SBML as input
-LIB_EXTERN  int LibStructural_loadSBML(const char* sSBML, char** oResult, int *nLength)
+LIB_EXTERN  int LibStructural_loadSBMLFromString(const char* sSBML, char** oResult, int *nLength)
 {
 	try
 	{
-		*oResult = strdup(LibStructural::getInstance()->loadSBML(string(sSBML)).c_str());
+		*oResult = strdup(LibStructural::getInstance()->loadSBMLFromString(string(sSBML)).c_str());
 		*nLength = strlen(*oResult);
 		return 0;
 	}

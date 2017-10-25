@@ -28,7 +28,7 @@
 	std::pair<LIB_LA::DoubleMatrix*,  std::vector< std::string> > findPositiveGammaMatrix(LIB_LA::DoubleMatrix* stoichiometry, std::vector< std::string> rowLabels) {
 		return std::make_pair(self->findPositiveGammaMatrix(*stoichiometry, rowLabels), rowLabels);
 	}
-	
+
 	std::pair< std::vector<std::string>, std::vector<std::string> > getColumnReorderedNrMatrixLabels() {
 		std::vector<std::string> rows;
 		std::vector<std::string> cols;
@@ -112,20 +112,6 @@
 		self->getStoichiometryMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
-	
-	std::pair< std::vector<std::string>, std::vector<std::string> > getFullyReorderedStoichiometryMatrixLabels() {
-		std::vector<std::string> rows;
-		std::vector<std::string> cols;
-		self->getFullyReorderedStoichiometryMatrixLabels(rows, cols);
-		return std::make_pair(rows, cols);
-	}
-	
-	std::pair< std::vector<std::string>, std::vector<std::string> > getReorderedStoichiometryMatrixLabels() {
-		std::vector<std::string> rows;
-		std::vector<std::string> cols;
-		self->getReorderedStoichiometryMatrixLabels(rows, cols);
-		return std::make_pair(rows, cols);
-	}
 }
 
 %ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
@@ -140,10 +126,6 @@
 %ignore LIB_STRUCTURAL::LibStructural::getNICMatrixLabels;
 %ignore LIB_STRUCTURAL::LibStructural::getNrMatrixLabels;
 %ignore LIB_STRUCTURAL::LibStructural::getStoichiometryMatrixLabels;
-%ignore LIB_STRUCTURAL::LibStructural::getFullyReorderedStoichiometryMatrixLabels;
-%ignore LIB_STRUCTURAL::LibStructural::getReorderedStoichiometryMatrixLabels;
-
-
 
 %include "../include/libstructural.h"
 
@@ -211,21 +193,6 @@ using LIB_LA::Matrix;
 %}
 }
 
-%pythoncode %{
-		def getFullyReorderedN0StoichiometryMatrix(self):
-			N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-			N_rowLen = len(N)
-			Nr = self.getFullyReorderedNrMatrix().toNumpy()
-			Nr_rowLen = len(Nr)
-			N0_rowLen = N_rowLen - Nr_rowLen
-			N0StoichMrx = StoichMrx[0:N0_rowLen]
-			return N0StoichMrx
-		def __repr__(self):
-				return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
-%}
-}
-
-
 %extend LIB_LA::Matrix<int>
 {
 	virtual int get(const unsigned int row, const unsigned int col)
@@ -248,20 +215,6 @@ using LIB_LA::Matrix;
 				return result
 		def __repr__(self):
 				return self.toNumpy().__repr__()
-%}
-}
-
-%pythoncode %{
-		def getFullyReorderedN0StoichiometryMatrix(self):
-			N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-			N_rowLen = len(N)
-			Nr = self.getFullyReorderedNrMatrix().toNumpy()
-			Nr_rowLen = len(Nr)
-			N0_rowLen = N_rowLen - Nr_rowLen
-			N0StoichMrx = StoichMrx[0:N0_rowLen]
-			return N0StoichMrx
-		def __repr__(self):
-				return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
 %}
 }
 

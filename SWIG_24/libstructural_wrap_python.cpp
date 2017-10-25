@@ -5360,18 +5360,6 @@ SWIGINTERN std::pair< std::vector< std::string,std::allocator< std::string > >,s
 		self->getStoichiometryMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
-SWIGINTERN std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > LIB_STRUCTURAL_LibStructural_getFullyReorderedStoichiometryMatrixLabels(LIB_STRUCTURAL::LibStructural *self){
-		std::vector<std::string> rows;
-		std::vector<std::string> cols;
-		self->getFullyReorderedStoichiometryMatrixLabels(rows, cols);
-		return std::make_pair(rows, cols);
-	}
-SWIGINTERN std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > LIB_STRUCTURAL_LibStructural_getReorderedStoichiometryMatrixLabels(LIB_STRUCTURAL::LibStructural *self){
-		std::vector<std::string> rows;
-		std::vector<std::string> cols;
-		self->getReorderedStoichiometryMatrixLabels(rows, cols);
-		return std::make_pair(rows, cols);
-	}
 
 #include "..\include\complex.h"
 
@@ -12996,7 +12984,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_LibStructural_loadSBMLFromString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_LibStructural_loadSBML(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
   std::string arg2 ;
@@ -13006,22 +12994,22 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadSBMLFromString(PyObject *SWIGUNUSED
   PyObject * obj1 = 0 ;
   std::string result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:LibStructural_loadSBMLFromString",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:LibStructural_loadSBML",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_loadSBMLFromString" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_loadSBML" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
   {
     std::string *ptr = (std::string *)0;
     int res = SWIG_AsPtr_std_string(obj1, &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "LibStructural_loadSBMLFromString" "', argument " "2"" of type '" "std::string""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "LibStructural_loadSBML" "', argument " "2"" of type '" "std::string""'"); 
     }
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (arg1)->loadSBMLFromString(arg2);
+  result = (arg1)->loadSBML(arg2);
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13242,28 +13230,6 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNrMatrix(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
   result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNrMatrix();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedNrMatrix(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  LIB_STRUCTURAL::LibStructural::DoubleMatrix *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:LibStructural_getFullyReorderedNrMatrix",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedNrMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
-  }
-  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedNrMatrix();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13525,6 +13491,51 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_LibStructural_getReorderedStoichiometryMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > *arg2 = 0 ;
+  std::vector< std::string,std::allocator< std::string > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:LibStructural_getReorderedStoichiometryMatrixLabels",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp3);
+  (arg1)->getReorderedStoichiometryMatrixLabels(*arg2,*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrix(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
@@ -13541,6 +13552,51 @@ SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrix(Py
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
   result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedStoichiometryMatrix();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > *arg2 = 0 ;
+  std::vector< std::string,std::allocator< std::string > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:LibStructural_getFullyReorderedStoichiometryMatrixLabels",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
+  }
+  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "3"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp3);
+  (arg1)->getFullyReorderedStoichiometryMatrixLabels(*arg2,*arg3);
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -14474,50 +14530,6 @@ SWIGINTERN PyObject *_wrap_LibStructural_getStoichiometryMatrixLabels(PyObject *
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
   result = LIB_STRUCTURAL_LibStructural_getStoichiometryMatrixLabels(arg1);
-  resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:LibStructural_getFullyReorderedStoichiometryMatrixLabels",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
-  }
-  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getFullyReorderedStoichiometryMatrixLabels(arg1);
-  resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_LibStructural_getReorderedStoichiometryMatrixLabels(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  LIB_STRUCTURAL::LibStructural *arg1 = (LIB_STRUCTURAL::LibStructural *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:LibStructural_getReorderedStoichiometryMatrixLabels",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
-  }
-  arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getReorderedStoichiometryMatrixLabels(arg1);
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -19146,7 +19158,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_loadStoichiometryMatrix", _wrap_LibStructural_loadStoichiometryMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_loadSpecies", _wrap_LibStructural_loadSpecies, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_loadReactionNames", _wrap_LibStructural_loadReactionNames, METH_VARARGS, NULL},
-	 { (char *)"LibStructural_loadSBMLFromString", _wrap_LibStructural_loadSBMLFromString, METH_VARARGS, NULL},
+	 { (char *)"LibStructural_loadSBML", _wrap_LibStructural_loadSBML, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_loadSBMLFromFile", _wrap_LibStructural_loadSBMLFromFile, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_loadSBMLwithTests", _wrap_LibStructural_loadSBMLwithTests, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_analyzeWithQR", _wrap_LibStructural_analyzeWithQR, METH_VARARGS, NULL},
@@ -19156,7 +19168,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_analyzeWithFullyPivotedLUwithTests", _wrap_LibStructural_analyzeWithFullyPivotedLUwithTests, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getL0Matrix", _wrap_LibStructural_getL0Matrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getNrMatrix", _wrap_LibStructural_getNrMatrix, METH_VARARGS, NULL},
-	 { (char *)"LibStructural_getFullyReorderedNrMatrix", _wrap_LibStructural_getFullyReorderedNrMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getColumnReorderedNrMatrix", _wrap_LibStructural_getColumnReorderedNrMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getNICMatrix", _wrap_LibStructural_getNICMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getNDCMatrix", _wrap_LibStructural_getNDCMatrix, METH_VARARGS, NULL},
@@ -19168,7 +19179,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_getGammaMatrixGJ", _wrap_LibStructural_getGammaMatrixGJ, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getStoichiometryMatrix", _wrap_LibStructural_getStoichiometryMatrix, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getReorderedStoichiometryMatrix", _wrap_LibStructural_getReorderedStoichiometryMatrix, METH_VARARGS, NULL},
+	 { (char *)"LibStructural_getReorderedStoichiometryMatrixLabels", _wrap_LibStructural_getReorderedStoichiometryMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getFullyReorderedStoichiometryMatrix", _wrap_LibStructural_getFullyReorderedStoichiometryMatrix, METH_VARARGS, NULL},
+	 { (char *)"LibStructural_getFullyReorderedStoichiometryMatrixLabels", _wrap_LibStructural_getFullyReorderedStoichiometryMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getReorderedSpecies", _wrap_LibStructural_getReorderedSpecies, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getSpecies", _wrap_LibStructural_getSpecies, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getReorderedSpeciesNamesList", _wrap_LibStructural_getReorderedSpeciesNamesList, METH_VARARGS, NULL},
@@ -19211,8 +19224,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"LibStructural_getNICMatrixLabels", _wrap_LibStructural_getNICMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getNrMatrixLabels", _wrap_LibStructural_getNrMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_getStoichiometryMatrixLabels", _wrap_LibStructural_getStoichiometryMatrixLabels, METH_VARARGS, NULL},
-	 { (char *)"LibStructural_getFullyReorderedStoichiometryMatrixLabels", _wrap_LibStructural_getFullyReorderedStoichiometryMatrixLabels, METH_VARARGS, NULL},
-	 { (char *)"LibStructural_getReorderedStoichiometryMatrixLabels", _wrap_LibStructural_getReorderedStoichiometryMatrixLabels, METH_VARARGS, NULL},
 	 { (char *)"delete_LibStructural", _wrap_delete_LibStructural, METH_VARARGS, NULL},
 	 { (char *)"LibStructural_swigregister", LibStructural_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_complexArray", _wrap_new_complexArray, METH_VARARGS, NULL},

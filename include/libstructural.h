@@ -33,7 +33,7 @@
 //  http://bioinformatics.oxfordjournals.org/cgi/content/abstract/bti800v1
 
 //   \par 
-//  For examples on how to use the library see LIB_STRUCTURAL::LibStructural::loadSBML and LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix
+//  For examples on how to use the library see LIB_STRUCTURAL::LibStructural::loadSBMLFromString and LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix
 
 
 #ifndef LIBCONSERVATION_LIBCONSERVATION_H
@@ -81,7 +81,7 @@ namespace LIB_STRUCTURAL
 		http://bioinformatics.oxfordjournals.org/cgi/content/abstract/bti800v1
 
 		\par Examples
-		For examples on how to use the library see LIB_STRUCTURAL::LibStructural::loadSBML and LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix
+		For examples on how to use the library see LIB_STRUCTURAL::LibStructural::loadSBMLFromString and LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix
 
 	*/
 	class LibStructural
@@ -263,7 +263,7 @@ namespace LIB_STRUCTURAL
 			\param sSBML the SBML string to load
 			\return information about the loaded model
 		*/
-		LIB_EXTERN std::string loadSBML(std::string sSBML);
+		LIB_EXTERN std::string loadSBMLFromString(std::string sSBML);
 
 		/*! \brief Load a SBML model from the specified file. 
 			\param sFileName a file name to a SBML file to load
@@ -280,7 +280,7 @@ namespace LIB_STRUCTURAL
 		/*! \brief Uses QR factorization for structural analysis
 
 			This method performs the actual analysis of the stoichiometry matrix (loaded either
-			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBML. Only after 
+			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBMLFromString. Only after 
 			one of the analysis methods below has been called are the structural matrices (L0, K0...)
 			available. 
 
@@ -299,7 +299,7 @@ namespace LIB_STRUCTURAL
 		/*! \brief Uses LU Decomposition for Conservation analysis
 
 			This method performs the actual analysis of the stoichiometry matrix (loaded either
-			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBML. Only after 
+			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBMLFromString. Only after 
 			one of the analysis methods below has been called are the structural matrices (L0, K0...)
 			available. 
 
@@ -315,7 +315,7 @@ namespace LIB_STRUCTURAL
 		/*! \brief Uses LU Decomposition for Conservation analysis
 
 			This method performs the actual analysis of the stoichiometry matrix (loaded either
-			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBML. Only after 
+			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBMLFromString. Only after 
 			one of the analysis methods below has been called are the structural matrices (L0, K0...)
 			available. 
 
@@ -334,7 +334,7 @@ namespace LIB_STRUCTURAL
 		/*! \brief Uses fully pivoted LU Decomposition for Conservation analysis
 
 			This method performs the actual analysis of the stoichiometry matrix (loaded either
-			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBML. Only after 
+			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBMLFromString. Only after 
 			one of the analysis methods below has been called are the structural matrices (L0, K0...)
 			available. 
 
@@ -351,7 +351,7 @@ namespace LIB_STRUCTURAL
 		/*! \brief Uses fully pivoted LU Decomposition for Conservation analysis
 
 			This method performs the actual analysis of the stoichiometry matrix (loaded either
-			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBML. Only after 
+			via LIB_STRUCTURAL::LibStructural::loadStoichiometryMatrix or LIB_STRUCTURAL::LibStructural::loadSBMLFromString. Only after 
 			one of the analysis methods below has been called are the structural matrices (L0, K0...)
 			available. 
 
@@ -387,6 +387,13 @@ namespace LIB_STRUCTURAL
 
 		*/
 		LIB_EXTERN DoubleMatrix* getNrMatrix(); 
+
+		/*! \brief Returns the Nr Matrix.
+
+		The rows of the Nr matrix will be linearly independent.
+
+		*/
+		LIB_EXTERN DoubleMatrix* getFullyReorderedNrMatrix();
 
 		/*! \brief Returns the Nr Matrix row and column labels.
 			\param oRows a string vector that will be overwritten to hold the row labels
@@ -782,7 +789,7 @@ about the loaded SBML
 an error occurred (invalid SBML)
 
 */
-LIB_EXTERN  int LibStructural_loadSBML(const char* sSBML, char* *outMessage, int *nLength);
+LIB_EXTERN  int LibStructural_loadSBMLFromString(const char* sSBML, char* *outMessage, int *nLength);
 
 /*! \brief Load a SBML model from the specified file. 
 \param sFileName the full path to the SBML file to be loaded.
@@ -813,7 +820,7 @@ LIB_EXTERN  int LibStructural_loadSBMLwithTests(const char* sSBML, char* *outMes
 /*! \brief Uses QR factorization for structural analysis
 
 This method performs the actual analysis of the stoichiometry matrix (loaded either
-via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBML. Only after 
+via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBMLFromString. Only after 
 one of the analysis methods below has been called are the structural matrices (L0, K0...)
 available. 
 
@@ -832,14 +839,14 @@ will be returned.
 
 \return The return value will be zero (0) when successful, and negative (-1) in case
 no stoichiometry matrix was loaded beforehand see ::LibStructural_loadStoichiometryMatrix
-or ::LibStructural_loadSBML or ::LibStructural_loadSBMLFromFile
+or ::LibStructural_loadSBMLFromString or ::LibStructural_loadSBMLFromFile
 
 */
 LIB_EXTERN  int LibStructural_analyzeWithQR(char* *outMessage, int *nLength);
 /*! \brief Uses LU Decomposition for structural analysis
 
 This method performs the actual analysis of the stoichiometry matrix (loaded either
-via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBML. Only after 
+via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBMLFromString. Only after 
 one of the analysis methods below has been called are the structural matrices (L0, K0...)
 available. 
 
@@ -855,13 +862,13 @@ will be returned.
 \param nLength the length of the message.
 \return The return value will be zero (0) when successful, and negative (-1) in case
 no stoichiometry matrix was loaded beforehand see ::LibStructural_loadStoichiometryMatrix
-or ::LibStructural_loadSBML or ::LibStructural_loadSBMLFromFile
+or ::LibStructural_loadSBMLFromString or ::LibStructural_loadSBMLFromFile
 */
 LIB_EXTERN  int LibStructural_analyzeWithLU(char* *outMessage, int *nLength); 
 /*! \brief Uses LU Decomposition for structural analysis
 
 This method performs the actual analysis of the stoichiometry matrix (loaded either
-via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBML. Only after 
+via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBMLFromString. Only after 
 one of the analysis methods below has been called are the structural matrices (L0, K0...)
 available. 
 
@@ -880,14 +887,14 @@ will be returned.
 
 \return The return value will be zero (0) when successful, and negative (-1) in case
 no stoichiometry matrix was loaded beforehand see ::LibStructural_loadStoichiometryMatrix
-or ::LibStructural_loadSBML or ::LibStructural_loadSBMLFromFile
+or ::LibStructural_loadSBMLFromString or ::LibStructural_loadSBMLFromFile
 
 */
 LIB_EXTERN  int LibStructural_analyzeWithLUandRunTests(char* *outMessage, int *nLength); 
 /*! \brief Uses fully pivoted LU decomposition for structural analysis.
 
 This method performs the actual analysis of the stoichiometry matrix (loaded either
-via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBML. Only after 
+via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBMLFromString. Only after 
 one of the analysis methods below has been called are the structural matrices (L0, K0...)
 available. 
 
@@ -907,13 +914,13 @@ will be returned.
 
 \return The return value will be zero (0) when successful, and negative (-1) in case
 no stoichiometry matrix was loaded beforehand. See ::LibStructural_loadStoichiometryMatrix
-or ::LibStructural_loadSBML or ::LibStructural_loadSBMLFromFile
+or ::LibStructural_loadSBMLFromString or ::LibStructural_loadSBMLFromFile
 */
 LIB_EXTERN  int LibStructural_analyzeWithFullyPivotedLU(char* *outMessage, int *nLength); 
 /*! \brief Uses fully pivoted LU decomposition for structural analysis
 
 This method performs the actual analysis of the stoichiometry matrix (loaded either
-via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBML. Only after 
+via ::LibStructural_loadStoichiometryMatrix or ::LibStructural_loadSBMLFromString. Only after 
 one of the analysis methods below has been called are the structural matrices (L0, K0...)
 available. 
 
@@ -935,7 +942,7 @@ will be returned.
 
 \return The return value will be zero (0) when successful, and negative (-1) in case
 no stoichiometry matrix was loaded beforehand see ::LibStructural_loadStoichiometryMatrix
-or ::LibStructural_loadSBML or ::LibStructural_loadSBMLFromFile
+or ::LibStructural_loadSBMLFromString or ::LibStructural_loadSBMLFromFile
 */
 LIB_EXTERN  int LibStructural_analyzeWithFullyPivotedLUwithTests(char* *outMessage, int *nLength); 
 
