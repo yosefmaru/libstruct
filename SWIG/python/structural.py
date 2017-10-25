@@ -418,6 +418,15 @@ class LibStructural(_object):
     def getStoichiometryMatrixLabels(self): return _structural.LibStructural_getStoichiometryMatrixLabels(self)
     def getFullyReorderedStoichiometryMatrixLabels(self): return _structural.LibStructural_getFullyReorderedStoichiometryMatrixLabels(self)
     def getReorderedStoichiometryMatrixLabels(self): return _structural.LibStructural_getReorderedStoichiometryMatrixLabels(self)
+    def getFullyReorderedN0StoichiometryMatrix(self):
+    		N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
+    		N_rowLen = len(N)
+    		Nr = self.getFullyReorderedNrMatrix().toNumpy()
+    		Nr_rowLen = len(Nr)
+    		N0_rowLen = N_rowLen - Nr_rowLen
+    		N0StoichMrx = N[0:N0_rowLen]
+    		return N0StoichMrx
+
     __swig_destroy__ = _structural.delete_LibStructural
     __del__ = lambda self : None;
 LibStructural_swigregister = _structural.LibStructural_swigregister
@@ -543,15 +552,7 @@ class DoubleMatrix(_object):
     						result[i,j] = self.get(i,j)
     		return result
     def __repr__(self):
-    	return self.toNumpy().__repr__()
-    def getFullyReorderedN0StoichiometryMatrix(self):
-    	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-    	N_rowLen = len(N)
-    	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-    	Nr_rowLen = len(Nr)
-    	N0_rowLen = N_rowLen - Nr_rowLen
-    	N0StoichMrx = StoichMrx[0:N0_rowLen]
-    	return N0StoichMrx
+    		return self.toNumpy().__repr__()
 
 DoubleMatrix_swigregister = _structural.DoubleMatrix_swigregister
 DoubleMatrix_swigregister(DoubleMatrix)
@@ -600,15 +601,7 @@ class IntMatrix(_object):
     						result[i,j] = self.get(i,j)
     		return result
     def __repr__(self):
-    	return self.toNumpy().__repr__()
-    def getFullyReorderedN0StoichiometryMatrix(self):
-    	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-    	N_rowLen = len(N)
-    	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-    	Nr_rowLen = len(Nr)
-    	N0_rowLen = N_rowLen - Nr_rowLen
-    	N0StoichMrx = StoichMrx[0:N0_rowLen]
-    	return N0StoichMrx
+    		return self.toNumpy().__repr__()
 
 IntMatrix_swigregister = _structural.IntMatrix_swigregister
 IntMatrix_swigregister(IntMatrix)

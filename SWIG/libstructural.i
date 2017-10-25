@@ -28,7 +28,7 @@
 	std::pair<LIB_LA::DoubleMatrix*,  std::vector< std::string> > findPositiveGammaMatrix(LIB_LA::DoubleMatrix* stoichiometry, std::vector< std::string> rowLabels) {
 		return std::make_pair(self->findPositiveGammaMatrix(*stoichiometry, rowLabels), rowLabels);
 	}
-	
+
 	std::pair< std::vector<std::string>, std::vector<std::string> > getColumnReorderedNrMatrixLabels() {
 		std::vector<std::string> rows;
 		std::vector<std::string> cols;
@@ -112,20 +112,32 @@
 		self->getStoichiometryMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
-	
+
 	std::pair< std::vector<std::string>, std::vector<std::string> > getFullyReorderedStoichiometryMatrixLabels() {
 		std::vector<std::string> rows;
 		std::vector<std::string> cols;
 		self->getFullyReorderedStoichiometryMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
-	
+
 	std::pair< std::vector<std::string>, std::vector<std::string> > getReorderedStoichiometryMatrixLabels() {
 		std::vector<std::string> rows;
 		std::vector<std::string> cols;
 		self->getReorderedStoichiometryMatrixLabels(rows, cols);
 		return std::make_pair(rows, cols);
 	}
+
+
+%pythoncode %{
+		def getFullyReorderedN0StoichiometryMatrix(self):
+				N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
+				N_rowLen = len(N)
+				Nr = self.getFullyReorderedNrMatrix().toNumpy()
+				Nr_rowLen = len(Nr)
+				N0_rowLen = N_rowLen - Nr_rowLen
+				N0StoichMrx = N[0:N0_rowLen]
+				return N0StoichMrx
+%}
 }
 
 %ignore LIB_STRUCTURAL::LibStructural::findPositiveGammaMatrix;
@@ -207,15 +219,7 @@ using LIB_LA::Matrix;
 								result[i,j] = self.get(i,j)
 				return result
 		def __repr__(self):
-			return self.toNumpy().__repr__()
-		def getFullyReorderedN0StoichiometryMatrix(self):
-			N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-			N_rowLen = len(N)
-			Nr = self.getFullyReorderedNrMatrix().toNumpy()
-			Nr_rowLen = len(Nr)
-			N0_rowLen = N_rowLen - Nr_rowLen
-			N0StoichMrx = StoichMrx[0:N0_rowLen]
-			return N0StoichMrx
+				return self.toNumpy().__repr__()
 %}
 }
 
@@ -241,15 +245,7 @@ using LIB_LA::Matrix;
 								result[i,j] = self.get(i,j)
 				return result
 		def __repr__(self):
-			return self.toNumpy().__repr__()
-		def getFullyReorderedN0StoichiometryMatrix(self):
-			N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-			N_rowLen = len(N)
-			Nr = self.getFullyReorderedNrMatrix().toNumpy()
-			Nr_rowLen = len(Nr)
-			N0_rowLen = N_rowLen - Nr_rowLen
-			N0StoichMrx = StoichMrx[0:N0_rowLen]
-			return N0StoichMrx
+				return self.toNumpy().__repr__()
 %}
 }
 
