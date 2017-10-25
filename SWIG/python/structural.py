@@ -543,7 +543,15 @@ class DoubleMatrix(_object):
     						result[i,j] = self.get(i,j)
     		return result
     def __repr__(self):
-    		return self.toNumpy().__repr__()
+    	return self.toNumpy().__repr__()
+    def getFullyReorderedN0StoichiometryMatrix(self):
+    	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
+    	N_rowLen = len(N)
+    	Nr = self.getFullyReorderedNrMatrix().toNumpy()
+    	Nr_rowLen = len(Nr)
+    	N0_rowLen = N_rowLen - Nr_rowLen
+    	N0StoichMrx = StoichMrx[0:N0_rowLen]
+    	return N0StoichMrx
 
 DoubleMatrix_swigregister = _structural.DoubleMatrix_swigregister
 DoubleMatrix_swigregister(DoubleMatrix)
@@ -593,6 +601,16 @@ class IntMatrix(_object):
     		return result
     def __repr__(self):
     		return self.toNumpy().__repr__()
+    def getFullyReorderedN0StoichiometryMatrix(self):
+    	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
+    	N_rowLen = len(N)
+    	Nr = self.getFullyReorderedNrMatrix().toNumpy()
+    	Nr_rowLen = len(Nr)
+    	N0_rowLen = N_rowLen - Nr_rowLen
+    	N0StoichMrx = StoichMrx[0:N0_rowLen]
+    	return N0StoichMrx
+    def __repr__(self):
+    		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
 
 IntMatrix_swigregister = _structural.IntMatrix_swigregister
 IntMatrix_swigregister(IntMatrix)
@@ -645,28 +663,6 @@ class ComplexMatrix(_object):
 
 ComplexMatrix_swigregister = _structural.ComplexMatrix_swigregister
 ComplexMatrix_swigregister(ComplexMatrix)
-
-def getFullyReorderedN0StoichiometryMatrix(self):
-	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-	N_rowLen = len(N)
-	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-	Nr_rowLen = len(Nr)
-	N0_rowLen = N_rowLen - Nr_rowLen
-	N0StoichMrx = StoichMrx[0:N0_rowLen]
-	return N0StoichMrx
-def __repr__(self):
-		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
-
-def getFullyReorderedN0StoichiometryMatrix(self):
-	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
-	N_rowLen = len(N)
-	Nr = self.getFullyReorderedNrMatrix().toNumpy()
-	Nr_rowLen = len(Nr)
-	N0_rowLen = N_rowLen - Nr_rowLen
-	N0StoichMrx = StoichMrx[0:N0_rowLen]
-	return N0StoichMrx
-def __repr__(self):
-		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
 
 # This file is compatible with both classic and new-style classes.
 
