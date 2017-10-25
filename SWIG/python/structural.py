@@ -600,7 +600,7 @@ class IntMatrix(_object):
     						result[i,j] = self.get(i,j)
     		return result
     def __repr__(self):
-    		return self.toNumpy().__repr__()
+    	return self.toNumpy().__repr__()
     def getFullyReorderedN0StoichiometryMatrix(self):
     	N = self.getFullyReorderedStoichiometryMatrix().toNumpy()
     	N_rowLen = len(N)
@@ -609,8 +609,6 @@ class IntMatrix(_object):
     	N0_rowLen = N_rowLen - Nr_rowLen
     	N0StoichMrx = StoichMrx[0:N0_rowLen]
     	return N0StoichMrx
-    def __repr__(self):
-    		return self.getFullyReorderedN0StoichiometryMatrix().__repr__()
 
 IntMatrix_swigregister = _structural.IntMatrix_swigregister
 IntMatrix_swigregister(IntMatrix)
