@@ -9,9 +9,26 @@
 #include "libla.h"
 %}
 
+%exception {
+	 try {
+     $action
+   } catch (const LIB_LA::ApplicationException& e) {
+     SWIG_exception(SWIG_RuntimeError, "app error");
+   } catch (LIB_LA::ApplicationException* e) {
+		 std::string msg = e->getDetailedMessage();
+		 delete e;
+     SWIG_exception(SWIG_RuntimeError, msg.c_str());
+   } catch (const std::exception& e) {
+     SWIG_exception(SWIG_RuntimeError, e.what());
+   } catch (...) {
+		 SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+	 }
+}
+
 %include "carrays.i"
 %include "typemaps.i"
 %include "stl.i"
+%include "exception.i"
 
 %template(StringDouble) std::pair<std::string,double>;
 %template(StrDoubleVector) std::vector< std::pair<std::string,double> >;

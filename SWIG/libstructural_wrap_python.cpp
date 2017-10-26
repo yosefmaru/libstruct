@@ -5532,7 +5532,21 @@ SWIGINTERN PyObject *_wrap_delete_SwigPyIterator(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SwigPyIterator" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -5554,17 +5568,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_value(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_value" "', argument " "1"" of type '" "swig::SwigPyIterator const *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (PyObject *)((swig::SwigPyIterator const *)arg1)->value();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (PyObject *)((swig::SwigPyIterator const *)arg1)->value();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = result;
   return resultobj;
 fail:
@@ -5595,17 +5623,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_incr__SWIG_0(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator_incr" "', argument " "2"" of type '" "size_t""'");
   } 
   arg2 = static_cast< size_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *)(arg1)->incr(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)(arg1)->incr(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, 0 |  0 );
   return resultobj;
 fail:
@@ -5627,17 +5669,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_incr__SWIG_1(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_incr" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (swig::SwigPyIterator *)(arg1)->incr();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)(arg1)->incr();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, 0 |  0 );
   return resultobj;
 fail:
@@ -5712,17 +5768,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_decr__SWIG_0(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator_decr" "', argument " "2"" of type '" "size_t""'");
   } 
   arg2 = static_cast< size_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *)(arg1)->decr(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)(arg1)->decr(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, 0 |  0 );
   return resultobj;
 fail:
@@ -5744,17 +5814,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_decr__SWIG_1(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_decr" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (swig::SwigPyIterator *)(arg1)->decr();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)(arg1)->decr();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, 0 |  0 );
   return resultobj;
 fail:
@@ -5832,13 +5916,27 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_distance(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SwigPyIterator_distance" "', argument " "2"" of type '" "swig::SwigPyIterator const &""'"); 
   }
   arg2 = reinterpret_cast< swig::SwigPyIterator * >(argp2);
-  try {
-    result = ((swig::SwigPyIterator const *)arg1)->distance((swig::SwigPyIterator const &)*arg2);
+  {
+    try {
+      try {
+        result = ((swig::SwigPyIterator const *)arg1)->distance((swig::SwigPyIterator const &)*arg2);
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_Python_Raise(SWIG_NewPointerObj((new std::invalid_argument(static_cast< const std::invalid_argument& >(_e))),SWIGTYPE_p_std__invalid_argument,SWIG_POINTER_OWN), "std::invalid_argument", SWIGTYPE_p_std__invalid_argument); SWIG_fail;
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::invalid_argument &_e) {
-    SWIG_Python_Raise(SWIG_NewPointerObj((new std::invalid_argument(static_cast< const std::invalid_argument& >(_e))),SWIGTYPE_p_std__invalid_argument,SWIG_POINTER_OWN), "std::invalid_argument", SWIGTYPE_p_std__invalid_argument); SWIG_fail;
-  }
-  
   resultobj = SWIG_From_ptrdiff_t(static_cast< ptrdiff_t >(result));
   return resultobj;
 fail:
@@ -5872,13 +5970,27 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_equal(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SwigPyIterator_equal" "', argument " "2"" of type '" "swig::SwigPyIterator const &""'"); 
   }
   arg2 = reinterpret_cast< swig::SwigPyIterator * >(argp2);
-  try {
-    result = (bool)((swig::SwigPyIterator const *)arg1)->equal((swig::SwigPyIterator const &)*arg2);
+  {
+    try {
+      try {
+        result = (bool)((swig::SwigPyIterator const *)arg1)->equal((swig::SwigPyIterator const &)*arg2);
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_Python_Raise(SWIG_NewPointerObj((new std::invalid_argument(static_cast< const std::invalid_argument& >(_e))),SWIGTYPE_p_std__invalid_argument,SWIG_POINTER_OWN), "std::invalid_argument", SWIGTYPE_p_std__invalid_argument); SWIG_fail;
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::invalid_argument &_e) {
-    SWIG_Python_Raise(SWIG_NewPointerObj((new std::invalid_argument(static_cast< const std::invalid_argument& >(_e))),SWIGTYPE_p_std__invalid_argument,SWIG_POINTER_OWN), "std::invalid_argument", SWIGTYPE_p_std__invalid_argument); SWIG_fail;
-  }
-  
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -5900,7 +6012,21 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_copy(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_copy" "', argument " "1"" of type '" "swig::SwigPyIterator const *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->copy();
+  {
+    try {
+      result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->copy();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -5922,17 +6048,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_next(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_next" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (PyObject *)(arg1)->next();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (PyObject *)(arg1)->next();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = result;
   return resultobj;
 fail:
@@ -5954,17 +6094,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___next__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator___next__" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (PyObject *)(arg1)->__next__();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (PyObject *)(arg1)->__next__();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = result;
   return resultobj;
 fail:
@@ -5986,17 +6140,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_previous(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SwigPyIterator_previous" "', argument " "1"" of type '" "swig::SwigPyIterator *""'"); 
   }
   arg1 = reinterpret_cast< swig::SwigPyIterator * >(argp1);
-  try {
-    result = (PyObject *)(arg1)->previous();
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (PyObject *)(arg1)->previous();
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = result;
   return resultobj;
 fail:
@@ -6027,17 +6195,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator_advance(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator_advance" "', argument " "2"" of type '" "ptrdiff_t""'");
   } 
   arg2 = static_cast< ptrdiff_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *)(arg1)->advance(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)(arg1)->advance(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, 0 |  0 );
   return resultobj;
 fail:
@@ -6071,7 +6253,21 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___eq__(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SwigPyIterator___eq__" "', argument " "2"" of type '" "swig::SwigPyIterator const &""'"); 
   }
   arg2 = reinterpret_cast< swig::SwigPyIterator * >(argp2);
-  result = (bool)((swig::SwigPyIterator const *)arg1)->operator ==((swig::SwigPyIterator const &)*arg2);
+  {
+    try {
+      result = (bool)((swig::SwigPyIterator const *)arg1)->operator ==((swig::SwigPyIterator const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -6105,7 +6301,21 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___ne__(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SwigPyIterator___ne__" "', argument " "2"" of type '" "swig::SwigPyIterator const &""'"); 
   }
   arg2 = reinterpret_cast< swig::SwigPyIterator * >(argp2);
-  result = (bool)((swig::SwigPyIterator const *)arg1)->operator !=((swig::SwigPyIterator const &)*arg2);
+  {
+    try {
+      result = (bool)((swig::SwigPyIterator const *)arg1)->operator !=((swig::SwigPyIterator const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -6136,17 +6346,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___iadd__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator___iadd__" "', argument " "2"" of type '" "ptrdiff_t""'");
   } 
   arg2 = static_cast< ptrdiff_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *) &(arg1)->operator +=(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *) &(arg1)->operator +=(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6177,17 +6401,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___isub__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator___isub__" "', argument " "2"" of type '" "ptrdiff_t""'");
   } 
   arg2 = static_cast< ptrdiff_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *) &(arg1)->operator -=(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *) &(arg1)->operator -=(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6218,17 +6456,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___add__(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator___add__" "', argument " "2"" of type '" "ptrdiff_t""'");
   } 
   arg2 = static_cast< ptrdiff_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->operator +(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->operator +(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6259,17 +6511,31 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___sub____SWIG_0(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SwigPyIterator___sub__" "', argument " "2"" of type '" "ptrdiff_t""'");
   } 
   arg2 = static_cast< ptrdiff_t >(val2);
-  try {
-    result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->operator -(arg2);
-  }
-  catch(swig::stop_iteration &_e) {
-    {
-      (void)_e;
-      SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
-      SWIG_fail;
+  {
+    try {
+      try {
+        result = (swig::SwigPyIterator *)((swig::SwigPyIterator const *)arg1)->operator -(arg2);
+      }
+      catch(swig::stop_iteration &_e) {
+        {
+          (void)_e;
+          SWIG_SetErrorObj(PyExc_StopIteration, SWIG_Py_Void());
+          SWIG_fail;
+        }
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
     }
   }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6303,7 +6569,21 @@ SWIGINTERN PyObject *_wrap_SwigPyIterator___sub____SWIG_1(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SwigPyIterator___sub__" "', argument " "2"" of type '" "swig::SwigPyIterator const &""'"); 
   }
   arg2 = reinterpret_cast< swig::SwigPyIterator * >(argp2);
-  result = ((swig::SwigPyIterator const *)arg1)->operator -((swig::SwigPyIterator const &)*arg2);
+  {
+    try {
+      result = ((swig::SwigPyIterator const *)arg1)->operator -((swig::SwigPyIterator const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_ptrdiff_t(static_cast< ptrdiff_t >(result));
   return resultobj;
 fail:
@@ -6368,7 +6648,21 @@ SWIGINTERN PyObject *_wrap_new_StringDouble__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
   std::pair< std::string,double > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_StringDouble")) SWIG_fail;
-  result = (std::pair< std::string,double > *)new std::pair< std::string,double >();
+  {
+    try {
+      result = (std::pair< std::string,double > *)new std::pair< std::string,double >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__string_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -6401,7 +6695,21 @@ SWIGINTERN PyObject *_wrap_new_StringDouble__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_StringDouble" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
-  result = (std::pair< std::string,double > *)new std::pair< std::string,double >(arg1,arg2);
+  {
+    try {
+      result = (std::pair< std::string,double > *)new std::pair< std::string,double >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__string_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -6428,7 +6736,21 @@ SWIGINTERN PyObject *_wrap_new_StringDouble__SWIG_2(PyObject *SWIGUNUSEDPARM(sel
     }
     arg1 = ptr;
   }
-  result = (std::pair< std::string,double > *)new std::pair< std::string,double >((std::pair< std::string,double > const &)*arg1);
+  {
+    try {
+      result = (std::pair< std::string,double > *)new std::pair< std::string,double >((std::pair< std::string,double > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__string_double_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -6608,7 +6930,21 @@ SWIGINTERN PyObject *_wrap_delete_StringDouble(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_StringDouble" "', argument " "1"" of type '" "std::pair< std::string,double > *""'"); 
   }
   arg1 = reinterpret_cast< std::pair< std::string,double > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -6639,7 +6975,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_iterator(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_iterator" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (swig::SwigPyIterator *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__iterator(arg1,arg2);
+  {
+    try {
+      result = (swig::SwigPyIterator *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__iterator(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6661,7 +7011,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___nonzero__(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector___nonzero__" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (bool)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____nonzero__((std::vector< std::pair< std::string,double > > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____nonzero__((std::vector< std::pair< std::string,double > > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -6683,7 +7047,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___bool__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector___bool__" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (bool)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____bool__((std::vector< std::pair< std::string,double > > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____bool__((std::vector< std::pair< std::string,double > > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -6705,7 +7083,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___len__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector___len__" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____len__((std::vector< std::pair< std::string,double > > const *)arg1);
+  {
+    try {
+      result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____len__((std::vector< std::pair< std::string,double > > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -6727,13 +7119,27 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_pop(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_pop" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  try {
-    result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__pop(arg1);
+  {
+    try {
+      try {
+        result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__pop(arg1);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = swig::from(static_cast< std::pair<std::string,double > >(result));
   return resultobj;
 fail:
@@ -6773,16 +7179,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___getslice__(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StrDoubleVector___getslice__" "', argument " "3"" of type '" "std::vector< std::pair< std::string,double > >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::pair< std::string,double > >::difference_type >(val3);
-  try {
-    result = (std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        result = (std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -6835,16 +7255,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___setslice____SWIG_0(PyObject *SWIGUN
     }
     arg4 = ptr;
   }
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > const &)*arg4);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > const &)*arg4);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res4)) delete arg4;
   return resultobj;
@@ -6885,16 +7319,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___setslice____SWIG_1(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StrDoubleVector___setslice__" "', argument " "3"" of type '" "std::vector< std::pair< std::string,double > >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::pair< std::string,double > >::difference_type >(val3);
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setslice____SWIG_0(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -6997,16 +7445,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___delslice__(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StrDoubleVector___delslice__" "', argument " "3"" of type '" "std::vector< std::pair< std::string,double > >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::pair< std::string,double > >::difference_type >(val3);
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7036,13 +7498,27 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___delitem____SWIG_0(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StrDoubleVector___delitem__" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< std::pair< std::string,double > >::difference_type >(val2);
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7072,16 +7548,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___getitem____SWIG_0(PyObject *SWIGUNU
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    result = (std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > *)std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -7124,16 +7614,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___setitem____SWIG_0(PyObject *SWIGUNU
     }
     arg3 = ptr;
   }
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_0(arg1,arg2,(std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_0(arg1,arg2,(std::vector< std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -7164,16 +7668,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___setitem____SWIG_1(PyObject *SWIGUNU
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7202,16 +7720,30 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___delitem____SWIG_1(PyObject *SWIGUNU
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____delitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7289,13 +7821,27 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___getitem____SWIG_1(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StrDoubleVector___getitem__" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< std::pair< std::string,double > >::difference_type >(val2);
-  try {
-    result = (std::vector< std::pair< std::string,double > >::value_type *) &std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getitem____SWIG_1((std::vector< std::pair< std::string,double > > const *)arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< std::pair< std::string,double > >::value_type *) &std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____getitem____SWIG_1((std::vector< std::pair< std::string,double > > const *)arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = swig::from(static_cast< std::pair<std::string,double > >(*result));
   return resultobj;
 fail:
@@ -7386,13 +7932,27 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector___setitem____SWIG_2(PyObject *SWIGUNU
     }
     arg3 = ptr;
   }
-  try {
-    std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_2(arg1,arg2,(std::pair< std::string,double > const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg____setitem____SWIG_2(arg1,arg2,(std::pair< std::string,double > const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -7498,7 +8058,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_append(PyObject *SWIGUNUSEDPARM(self)
     }
     arg2 = ptr;
   }
-  std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__append(arg1,(std::pair< std::string,double > const &)*arg2);
+  {
+    try {
+      std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__append(arg1,(std::pair< std::string,double > const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -7513,7 +8087,21 @@ SWIGINTERN PyObject *_wrap_new_StrDoubleVector__SWIG_0(PyObject *SWIGUNUSEDPARM(
   std::vector< std::pair< std::string,double > > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_StrDoubleVector")) SWIG_fail;
-  result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >();
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -7540,7 +8128,21 @@ SWIGINTERN PyObject *_wrap_new_StrDoubleVector__SWIG_1(PyObject *SWIGUNUSEDPARM(
     }
     arg1 = ptr;
   }
-  result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >((std::vector< std::pair< std::string,double > > const &)*arg1);
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >((std::vector< std::pair< std::string,double > > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -7564,7 +8166,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_empty(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_empty" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (bool)((std::vector< std::pair< std::string,double > > const *)arg1)->empty();
+  {
+    try {
+      result = (bool)((std::vector< std::pair< std::string,double > > const *)arg1)->empty();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -7586,7 +8202,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_size(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_size" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = ((std::vector< std::pair< std::string,double > > const *)arg1)->size();
+  {
+    try {
+      result = ((std::vector< std::pair< std::string,double > > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -7607,7 +8237,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_clear(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_clear" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  (arg1)->clear();
+  {
+    try {
+      (arg1)->clear();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7640,7 +8284,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_swap(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "StrDoubleVector_swap" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > > &""'"); 
   }
   arg2 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp2);
-  (arg1)->swap(*arg2);
+  {
+    try {
+      (arg1)->swap(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7662,7 +8320,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_get_allocator(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_get_allocator" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = ((std::vector< std::pair< std::string,double > > const *)arg1)->get_allocator();
+  {
+    try {
+      result = ((std::vector< std::pair< std::string,double > > const *)arg1)->get_allocator();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj((new std::vector< std::pair< std::string,double > >::allocator_type(static_cast< const std::vector< std::pair< std::string,double > >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_std__pairT_std__string_double_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -7684,7 +8356,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_begin(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_begin" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (arg1)->begin();
+  {
+    try {
+      result = (arg1)->begin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -7707,7 +8393,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_end(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_end" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (arg1)->end();
+  {
+    try {
+      result = (arg1)->end();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -7730,7 +8430,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_rbegin(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_rbegin" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (arg1)->rbegin();
+  {
+    try {
+      result = (arg1)->rbegin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -7753,7 +8467,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_rend(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_rend" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (arg1)->rend();
+  {
+    try {
+      result = (arg1)->rend();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -7776,7 +8504,21 @@ SWIGINTERN PyObject *_wrap_new_StrDoubleVector__SWIG_2(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_StrDoubleVector" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > >::size_type""'");
   } 
   arg1 = static_cast< std::vector< std::pair< std::string,double > >::size_type >(val1);
-  result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >(arg1);
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -7797,7 +8539,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_pop_back(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_pop_back" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  (arg1)->pop_back();
+  {
+    try {
+      (arg1)->pop_back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7827,7 +8583,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_resize__SWIG_0(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StrDoubleVector_resize" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > >::size_type""'");
   } 
   arg2 = static_cast< std::vector< std::pair< std::string,double > >::size_type >(val2);
-  (arg1)->resize(arg2);
+  {
+    try {
+      (arg1)->resize(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7864,7 +8634,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_erase__SWIG_0(PyObject *SWIGUNUSEDPAR
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "StrDoubleVector_erase" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > >::iterator""'");
     }
   }
-  result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__erase__SWIG_0(arg1,arg2);
+  {
+    try {
+      result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__erase__SWIG_0(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -7917,7 +8701,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_erase__SWIG_1(PyObject *SWIGUNUSEDPAR
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "StrDoubleVector_erase" "', argument " "3"" of type '" "std::vector< std::pair< std::string,double > >::iterator""'");
     }
   }
-  result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__erase__SWIG_1(arg1,arg2,arg3);
+  {
+    try {
+      result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__erase__SWIG_1(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -8005,7 +8803,21 @@ SWIGINTERN PyObject *_wrap_new_StrDoubleVector__SWIG_3(PyObject *SWIGUNUSEDPARM(
     }
     arg2 = ptr;
   }
-  result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >(arg1,(std::vector< std::pair< std::string,double > >::value_type const &)*arg2);
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > > *)new std::vector< std::pair< std::string,double > >(arg1,(std::vector< std::pair< std::string,double > >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__pairT_std__string_double_t_std__allocatorT_std__pairT_std__string_double_t_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -8099,7 +8911,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_push_back(PyObject *SWIGUNUSEDPARM(se
     }
     arg2 = ptr;
   }
-  (arg1)->push_back((std::vector< std::pair< std::string,double > >::value_type const &)*arg2);
+  {
+    try {
+      (arg1)->push_back((std::vector< std::pair< std::string,double > >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -8123,7 +8949,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_front(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_front" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (std::vector< std::pair< std::string,double > >::value_type *) &((std::vector< std::pair< std::string,double > > const *)arg1)->front();
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > >::value_type *) &((std::vector< std::pair< std::string,double > > const *)arg1)->front();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::string,double > >(*result));
   return resultobj;
 fail:
@@ -8145,7 +8985,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_back(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_back" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = (std::vector< std::pair< std::string,double > >::value_type *) &((std::vector< std::pair< std::string,double > > const *)arg1)->back();
+  {
+    try {
+      result = (std::vector< std::pair< std::string,double > >::value_type *) &((std::vector< std::pair< std::string,double > > const *)arg1)->back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::string,double > >(*result));
   return resultobj;
 fail:
@@ -8189,7 +9043,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_assign(PyObject *SWIGUNUSEDPARM(self)
     }
     arg3 = ptr;
   }
-  (arg1)->assign(arg2,(std::vector< std::pair< std::string,double > >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->assign(arg2,(std::vector< std::pair< std::string,double > >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -8235,7 +9103,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_resize__SWIG_1(PyObject *SWIGUNUSEDPA
     }
     arg3 = ptr;
   }
-  (arg1)->resize(arg2,(std::vector< std::pair< std::string,double > >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->resize(arg2,(std::vector< std::pair< std::string,double > >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -8340,7 +9222,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_insert__SWIG_0(PyObject *SWIGUNUSEDPA
     }
     arg3 = ptr;
   }
-  result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__insert__SWIG_0(arg1,arg2,(std::pair< std::string,double > const &)*arg3);
+  {
+    try {
+      result = std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__insert__SWIG_0(arg1,arg2,(std::pair< std::string,double > const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::pair< std::string,double > >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   if (SWIG_IsNewObj(res3)) delete arg3;
@@ -8402,7 +9298,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_insert__SWIG_1(PyObject *SWIGUNUSEDPA
     }
     arg4 = ptr;
   }
-  std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__insert__SWIG_1(arg1,arg2,arg3,(std::pair< std::string,double > const &)*arg4);
+  {
+    try {
+      std_vector_Sl_std_pair_Sl_std_string_Sc_double_Sg__Sg__insert__SWIG_1(arg1,arg2,arg3,(std::pair< std::string,double > const &)*arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res4)) delete arg4;
   return resultobj;
@@ -8494,7 +9404,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_reserve(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StrDoubleVector_reserve" "', argument " "2"" of type '" "std::vector< std::pair< std::string,double > >::size_type""'");
   } 
   arg2 = static_cast< std::vector< std::pair< std::string,double > >::size_type >(val2);
-  (arg1)->reserve(arg2);
+  {
+    try {
+      (arg1)->reserve(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -8516,7 +9440,21 @@ SWIGINTERN PyObject *_wrap_StrDoubleVector_capacity(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StrDoubleVector_capacity" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  result = ((std::vector< std::pair< std::string,double > > const *)arg1)->capacity();
+  {
+    try {
+      result = ((std::vector< std::pair< std::string,double > > const *)arg1)->capacity();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -8537,7 +9475,21 @@ SWIGINTERN PyObject *_wrap_delete_StrDoubleVector(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_StrDoubleVector" "', argument " "1"" of type '" "std::vector< std::pair< std::string,double > > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::pair< std::string,double > > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -8568,7 +9520,21 @@ SWIGINTERN PyObject *_wrap_StringVector_iterator(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_iterator" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (swig::SwigPyIterator *)std_vector_Sl_std_string_Sg__iterator(arg1,arg2);
+  {
+    try {
+      result = (swig::SwigPyIterator *)std_vector_Sl_std_string_Sg__iterator(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -8590,7 +9556,21 @@ SWIGINTERN PyObject *_wrap_StringVector___nonzero__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector___nonzero__" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (bool)std_vector_Sl_std_string_Sg____nonzero__((std::vector< std::string > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_std_string_Sg____nonzero__((std::vector< std::string > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -8612,7 +9592,21 @@ SWIGINTERN PyObject *_wrap_StringVector___bool__(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector___bool__" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (bool)std_vector_Sl_std_string_Sg____bool__((std::vector< std::string > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_std_string_Sg____bool__((std::vector< std::string > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -8634,7 +9628,21 @@ SWIGINTERN PyObject *_wrap_StringVector___len__(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector___len__" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = std_vector_Sl_std_string_Sg____len__((std::vector< std::string > const *)arg1);
+  {
+    try {
+      result = std_vector_Sl_std_string_Sg____len__((std::vector< std::string > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -8656,13 +9664,27 @@ SWIGINTERN PyObject *_wrap_StringVector_pop(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_pop" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  try {
-    result = std_vector_Sl_std_string_Sg__pop(arg1);
+  {
+    try {
+      try {
+        result = std_vector_Sl_std_string_Sg__pop(arg1);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -8702,16 +9724,30 @@ SWIGINTERN PyObject *_wrap_StringVector___getslice__(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StringVector___getslice__" "', argument " "3"" of type '" "std::vector< std::string >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::string >::difference_type >(val3);
-  try {
-    result = (std::vector< std::string,std::allocator< std::string > > *)std_vector_Sl_std_string_Sg____getslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        result = (std::vector< std::string,std::allocator< std::string > > *)std_vector_Sl_std_string_Sg____getslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -8764,16 +9800,30 @@ SWIGINTERN PyObject *_wrap_StringVector___setslice____SWIG_0(PyObject *SWIGUNUSE
     }
     arg4 = ptr;
   }
-  try {
-    std_vector_Sl_std_string_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< std::string,std::allocator< std::string > > const &)*arg4);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< std::string,std::allocator< std::string > > const &)*arg4);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res4)) delete arg4;
   return resultobj;
@@ -8814,16 +9864,30 @@ SWIGINTERN PyObject *_wrap_StringVector___setslice____SWIG_1(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StringVector___setslice__" "', argument " "3"" of type '" "std::vector< std::string >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::string >::difference_type >(val3);
-  try {
-    std_vector_Sl_std_string_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -8926,16 +9990,30 @@ SWIGINTERN PyObject *_wrap_StringVector___delslice__(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "StringVector___delslice__" "', argument " "3"" of type '" "std::vector< std::string >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< std::string >::difference_type >(val3);
-  try {
-    std_vector_Sl_std_string_Sg____delslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____delslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -8965,13 +10043,27 @@ SWIGINTERN PyObject *_wrap_StringVector___delitem____SWIG_0(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StringVector___delitem__" "', argument " "2"" of type '" "std::vector< std::string >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< std::string >::difference_type >(val2);
-  try {
-    std_vector_Sl_std_string_Sg____delitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____delitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9001,16 +10093,30 @@ SWIGINTERN PyObject *_wrap_StringVector___getitem____SWIG_0(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    result = (std::vector< std::string,std::allocator< std::string > > *)std_vector_Sl_std_string_Sg____getitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< std::string,std::allocator< std::string > > *)std_vector_Sl_std_string_Sg____getitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -9053,16 +10159,30 @@ SWIGINTERN PyObject *_wrap_StringVector___setitem____SWIG_0(PyObject *SWIGUNUSED
     }
     arg3 = ptr;
   }
-  try {
-    std_vector_Sl_std_string_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< std::string,std::allocator< std::string > > const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< std::string,std::allocator< std::string > > const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -9093,16 +10213,30 @@ SWIGINTERN PyObject *_wrap_StringVector___setitem____SWIG_1(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_std_string_Sg____setitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____setitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9131,16 +10265,30 @@ SWIGINTERN PyObject *_wrap_StringVector___delitem____SWIG_1(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_std_string_Sg____delitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____delitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9218,13 +10366,27 @@ SWIGINTERN PyObject *_wrap_StringVector___getitem____SWIG_1(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StringVector___getitem__" "', argument " "2"" of type '" "std::vector< std::string >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< std::string >::difference_type >(val2);
-  try {
-    result = (std::vector< std::string >::value_type *) &std_vector_Sl_std_string_Sg____getitem____SWIG_1((std::vector< std::string > const *)arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< std::string >::value_type *) &std_vector_Sl_std_string_Sg____getitem____SWIG_1((std::vector< std::string > const *)arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
   return resultobj;
 fail:
@@ -9315,13 +10477,27 @@ SWIGINTERN PyObject *_wrap_StringVector___setitem____SWIG_2(PyObject *SWIGUNUSED
     }
     arg3 = ptr;
   }
-  try {
-    std_vector_Sl_std_string_Sg____setitem____SWIG_2(arg1,arg2,(std::string const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_std_string_Sg____setitem____SWIG_2(arg1,arg2,(std::string const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -9427,7 +10603,21 @@ SWIGINTERN PyObject *_wrap_StringVector_append(PyObject *SWIGUNUSEDPARM(self), P
     }
     arg2 = ptr;
   }
-  std_vector_Sl_std_string_Sg__append(arg1,(std::string const &)*arg2);
+  {
+    try {
+      std_vector_Sl_std_string_Sg__append(arg1,(std::string const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -9442,7 +10632,21 @@ SWIGINTERN PyObject *_wrap_new_StringVector__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
   std::vector< std::string > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_StringVector")) SWIG_fail;
-  result = (std::vector< std::string > *)new std::vector< std::string >();
+  {
+    try {
+      result = (std::vector< std::string > *)new std::vector< std::string >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -9469,7 +10673,21 @@ SWIGINTERN PyObject *_wrap_new_StringVector__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     }
     arg1 = ptr;
   }
-  result = (std::vector< std::string > *)new std::vector< std::string >((std::vector< std::string > const &)*arg1);
+  {
+    try {
+      result = (std::vector< std::string > *)new std::vector< std::string >((std::vector< std::string > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -9493,7 +10711,21 @@ SWIGINTERN PyObject *_wrap_StringVector_empty(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_empty" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (bool)((std::vector< std::string > const *)arg1)->empty();
+  {
+    try {
+      result = (bool)((std::vector< std::string > const *)arg1)->empty();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -9515,7 +10747,21 @@ SWIGINTERN PyObject *_wrap_StringVector_size(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_size" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = ((std::vector< std::string > const *)arg1)->size();
+  {
+    try {
+      result = ((std::vector< std::string > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -9536,7 +10782,21 @@ SWIGINTERN PyObject *_wrap_StringVector_clear(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_clear" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  (arg1)->clear();
+  {
+    try {
+      (arg1)->clear();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9569,7 +10829,21 @@ SWIGINTERN PyObject *_wrap_StringVector_swap(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "StringVector_swap" "', argument " "2"" of type '" "std::vector< std::string > &""'"); 
   }
   arg2 = reinterpret_cast< std::vector< std::string > * >(argp2);
-  (arg1)->swap(*arg2);
+  {
+    try {
+      (arg1)->swap(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9591,7 +10865,21 @@ SWIGINTERN PyObject *_wrap_StringVector_get_allocator(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_get_allocator" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = ((std::vector< std::string > const *)arg1)->get_allocator();
+  {
+    try {
+      result = ((std::vector< std::string > const *)arg1)->get_allocator();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj((new std::vector< std::string >::allocator_type(static_cast< const std::vector< std::string >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_std__string_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -9613,7 +10901,21 @@ SWIGINTERN PyObject *_wrap_StringVector_begin(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_begin" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (arg1)->begin();
+  {
+    try {
+      result = (arg1)->begin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9636,7 +10938,21 @@ SWIGINTERN PyObject *_wrap_StringVector_end(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_end" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (arg1)->end();
+  {
+    try {
+      result = (arg1)->end();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9659,7 +10975,21 @@ SWIGINTERN PyObject *_wrap_StringVector_rbegin(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_rbegin" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (arg1)->rbegin();
+  {
+    try {
+      result = (arg1)->rbegin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9682,7 +11012,21 @@ SWIGINTERN PyObject *_wrap_StringVector_rend(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_rend" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (arg1)->rend();
+  {
+    try {
+      result = (arg1)->rend();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9705,7 +11049,21 @@ SWIGINTERN PyObject *_wrap_new_StringVector__SWIG_2(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_StringVector" "', argument " "1"" of type '" "std::vector< std::string >::size_type""'");
   } 
   arg1 = static_cast< std::vector< std::string >::size_type >(val1);
-  result = (std::vector< std::string > *)new std::vector< std::string >(arg1);
+  {
+    try {
+      result = (std::vector< std::string > *)new std::vector< std::string >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -9726,7 +11084,21 @@ SWIGINTERN PyObject *_wrap_StringVector_pop_back(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_pop_back" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  (arg1)->pop_back();
+  {
+    try {
+      (arg1)->pop_back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9756,7 +11128,21 @@ SWIGINTERN PyObject *_wrap_StringVector_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StringVector_resize" "', argument " "2"" of type '" "std::vector< std::string >::size_type""'");
   } 
   arg2 = static_cast< std::vector< std::string >::size_type >(val2);
-  (arg1)->resize(arg2);
+  {
+    try {
+      (arg1)->resize(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -9793,7 +11179,21 @@ SWIGINTERN PyObject *_wrap_StringVector_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(s
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "StringVector_erase" "', argument " "2"" of type '" "std::vector< std::string >::iterator""'");
     }
   }
-  result = std_vector_Sl_std_string_Sg__erase__SWIG_0(arg1,arg2);
+  {
+    try {
+      result = std_vector_Sl_std_string_Sg__erase__SWIG_0(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9846,7 +11246,21 @@ SWIGINTERN PyObject *_wrap_StringVector_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(s
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "StringVector_erase" "', argument " "3"" of type '" "std::vector< std::string >::iterator""'");
     }
   }
-  result = std_vector_Sl_std_string_Sg__erase__SWIG_1(arg1,arg2,arg3);
+  {
+    try {
+      result = std_vector_Sl_std_string_Sg__erase__SWIG_1(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -9934,7 +11348,21 @@ SWIGINTERN PyObject *_wrap_new_StringVector__SWIG_3(PyObject *SWIGUNUSEDPARM(sel
     }
     arg2 = ptr;
   }
-  result = (std::vector< std::string > *)new std::vector< std::string >(arg1,(std::vector< std::string >::value_type const &)*arg2);
+  {
+    try {
+      result = (std::vector< std::string > *)new std::vector< std::string >(arg1,(std::vector< std::string >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -10028,7 +11456,21 @@ SWIGINTERN PyObject *_wrap_StringVector_push_back(PyObject *SWIGUNUSEDPARM(self)
     }
     arg2 = ptr;
   }
-  (arg1)->push_back((std::vector< std::string >::value_type const &)*arg2);
+  {
+    try {
+      (arg1)->push_back((std::vector< std::string >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -10052,7 +11494,21 @@ SWIGINTERN PyObject *_wrap_StringVector_front(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_front" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (std::vector< std::string >::value_type *) &((std::vector< std::string > const *)arg1)->front();
+  {
+    try {
+      result = (std::vector< std::string >::value_type *) &((std::vector< std::string > const *)arg1)->front();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
   return resultobj;
 fail:
@@ -10074,7 +11530,21 @@ SWIGINTERN PyObject *_wrap_StringVector_back(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_back" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = (std::vector< std::string >::value_type *) &((std::vector< std::string > const *)arg1)->back();
+  {
+    try {
+      result = (std::vector< std::string >::value_type *) &((std::vector< std::string > const *)arg1)->back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
   return resultobj;
 fail:
@@ -10118,7 +11588,21 @@ SWIGINTERN PyObject *_wrap_StringVector_assign(PyObject *SWIGUNUSEDPARM(self), P
     }
     arg3 = ptr;
   }
-  (arg1)->assign(arg2,(std::vector< std::string >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->assign(arg2,(std::vector< std::string >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -10164,7 +11648,21 @@ SWIGINTERN PyObject *_wrap_StringVector_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(
     }
     arg3 = ptr;
   }
-  (arg1)->resize(arg2,(std::vector< std::string >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->resize(arg2,(std::vector< std::string >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -10269,7 +11767,21 @@ SWIGINTERN PyObject *_wrap_StringVector_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(
     }
     arg3 = ptr;
   }
-  result = std_vector_Sl_std_string_Sg__insert__SWIG_0(arg1,arg2,(std::string const &)*arg3);
+  {
+    try {
+      result = std_vector_Sl_std_string_Sg__insert__SWIG_0(arg1,arg2,(std::string const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< std::string >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   if (SWIG_IsNewObj(res3)) delete arg3;
@@ -10331,7 +11843,21 @@ SWIGINTERN PyObject *_wrap_StringVector_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(
     }
     arg4 = ptr;
   }
-  std_vector_Sl_std_string_Sg__insert__SWIG_1(arg1,arg2,arg3,(std::string const &)*arg4);
+  {
+    try {
+      std_vector_Sl_std_string_Sg__insert__SWIG_1(arg1,arg2,arg3,(std::string const &)*arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res4)) delete arg4;
   return resultobj;
@@ -10423,7 +11949,21 @@ SWIGINTERN PyObject *_wrap_StringVector_reserve(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "StringVector_reserve" "', argument " "2"" of type '" "std::vector< std::string >::size_type""'");
   } 
   arg2 = static_cast< std::vector< std::string >::size_type >(val2);
-  (arg1)->reserve(arg2);
+  {
+    try {
+      (arg1)->reserve(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -10445,7 +11985,21 @@ SWIGINTERN PyObject *_wrap_StringVector_capacity(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "StringVector_capacity" "', argument " "1"" of type '" "std::vector< std::string > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  result = ((std::vector< std::string > const *)arg1)->capacity();
+  {
+    try {
+      result = ((std::vector< std::string > const *)arg1)->capacity();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -10466,7 +12020,21 @@ SWIGINTERN PyObject *_wrap_delete_StringVector(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_StringVector" "', argument " "1"" of type '" "std::vector< std::string > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< std::string > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -10497,7 +12065,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_iterator(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_iterator" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (swig::SwigPyIterator *)std_vector_Sl_double_Sg__iterator(arg1,arg2);
+  {
+    try {
+      result = (swig::SwigPyIterator *)std_vector_Sl_double_Sg__iterator(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -10519,7 +12101,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector___nonzero__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector___nonzero__" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (bool)std_vector_Sl_double_Sg____nonzero__((std::vector< double > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_double_Sg____nonzero__((std::vector< double > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -10541,7 +12137,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector___bool__(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector___bool__" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (bool)std_vector_Sl_double_Sg____bool__((std::vector< double > const *)arg1);
+  {
+    try {
+      result = (bool)std_vector_Sl_double_Sg____bool__((std::vector< double > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -10563,7 +12173,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector___len__(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector___len__" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = std_vector_Sl_double_Sg____len__((std::vector< double > const *)arg1);
+  {
+    try {
+      result = std_vector_Sl_double_Sg____len__((std::vector< double > const *)arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -10585,13 +12209,27 @@ SWIGINTERN PyObject *_wrap_DoubleVector_pop(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_pop" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  try {
-    result = (std::vector< double >::value_type)std_vector_Sl_double_Sg__pop(arg1);
+  {
+    try {
+      try {
+        result = (std::vector< double >::value_type)std_vector_Sl_double_Sg__pop(arg1);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -10631,16 +12269,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___getslice__(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleVector___getslice__" "', argument " "3"" of type '" "std::vector< double >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< double >::difference_type >(val3);
-  try {
-    result = (std::vector< double,std::allocator< double > > *)std_vector_Sl_double_Sg____getslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        result = (std::vector< double,std::allocator< double > > *)std_vector_Sl_double_Sg____getslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -10693,16 +12345,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___setslice____SWIG_0(PyObject *SWIGUNUSE
     }
     arg4 = ptr;
   }
-  try {
-    std_vector_Sl_double_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< double,std::allocator< double > > const &)*arg4);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< double,std::allocator< double > > const &)*arg4);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res4)) delete arg4;
   return resultobj;
@@ -10743,16 +12409,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___setslice____SWIG_1(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleVector___setslice__" "', argument " "3"" of type '" "std::vector< double >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< double >::difference_type >(val3);
-  try {
-    std_vector_Sl_double_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -10855,16 +12535,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___delslice__(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleVector___delslice__" "', argument " "3"" of type '" "std::vector< double >::difference_type""'");
   } 
   arg3 = static_cast< std::vector< double >::difference_type >(val3);
-  try {
-    std_vector_Sl_double_Sg____delslice__(arg1,arg2,arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____delslice__(arg1,arg2,arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -10894,13 +12588,27 @@ SWIGINTERN PyObject *_wrap_DoubleVector___delitem____SWIG_0(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleVector___delitem__" "', argument " "2"" of type '" "std::vector< double >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< double >::difference_type >(val2);
-  try {
-    std_vector_Sl_double_Sg____delitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____delitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -10930,16 +12638,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___getitem____SWIG_0(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    result = (std::vector< double,std::allocator< double > > *)std_vector_Sl_double_Sg____getitem____SWIG_0(arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< double,std::allocator< double > > *)std_vector_Sl_double_Sg____getitem____SWIG_0(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -10982,16 +12704,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___setitem____SWIG_0(PyObject *SWIGUNUSED
     }
     arg3 = ptr;
   }
-  try {
-    std_vector_Sl_double_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< double,std::allocator< double > > const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< double,std::allocator< double > > const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
@@ -11022,16 +12758,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___setitem____SWIG_1(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_double_Sg____setitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____setitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11060,16 +12810,30 @@ SWIGINTERN PyObject *_wrap_DoubleVector___delitem____SWIG_1(PyObject *SWIGUNUSED
     }
     arg2 = (PySliceObject *) obj1;
   }
-  try {
-    std_vector_Sl_double_Sg____delitem____SWIG_1(arg1,arg2);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____delitem____SWIG_1(arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11147,13 +12911,27 @@ SWIGINTERN PyObject *_wrap_DoubleVector___getitem____SWIG_1(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleVector___getitem__" "', argument " "2"" of type '" "std::vector< double >::difference_type""'");
   } 
   arg2 = static_cast< std::vector< double >::difference_type >(val2);
-  try {
-    result = (std::vector< double >::value_type *) &std_vector_Sl_double_Sg____getitem____SWIG_1((std::vector< double > const *)arg1,arg2);
+  {
+    try {
+      try {
+        result = (std::vector< double >::value_type *) &std_vector_Sl_double_Sg____getitem____SWIG_1((std::vector< double > const *)arg1,arg2);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_From_double(static_cast< double >(*result));
   return resultobj;
 fail:
@@ -11241,13 +13019,27 @@ SWIGINTERN PyObject *_wrap_DoubleVector___setitem____SWIG_2(PyObject *SWIGUNUSED
   } 
   temp3 = static_cast< std::vector< double >::value_type >(val3);
   arg3 = &temp3;
-  try {
-    std_vector_Sl_double_Sg____setitem____SWIG_2(arg1,arg2,(double const &)*arg3);
+  {
+    try {
+      try {
+        std_vector_Sl_double_Sg____setitem____SWIG_2(arg1,arg2,(double const &)*arg3);
+      }
+      catch(std::out_of_range &_e) {
+        SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+      }
+      
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
   }
-  catch(std::out_of_range &_e) {
-    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
-  }
-  
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11350,7 +13142,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_append(PyObject *SWIGUNUSEDPARM(self), P
   } 
   temp2 = static_cast< std::vector< double >::value_type >(val2);
   arg2 = &temp2;
-  std_vector_Sl_double_Sg__append(arg1,(double const &)*arg2);
+  {
+    try {
+      std_vector_Sl_double_Sg__append(arg1,(double const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11363,7 +13169,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleVector__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
   std::vector< double > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_DoubleVector")) SWIG_fail;
-  result = (std::vector< double > *)new std::vector< double >();
+  {
+    try {
+      result = (std::vector< double > *)new std::vector< double >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -11390,7 +13210,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleVector__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     }
     arg1 = ptr;
   }
-  result = (std::vector< double > *)new std::vector< double >((std::vector< double > const &)*arg1);
+  {
+    try {
+      result = (std::vector< double > *)new std::vector< double >((std::vector< double > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -11414,7 +13248,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_empty(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_empty" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (bool)((std::vector< double > const *)arg1)->empty();
+  {
+    try {
+      result = (bool)((std::vector< double > const *)arg1)->empty();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -11436,7 +13284,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_size(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_size" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = ((std::vector< double > const *)arg1)->size();
+  {
+    try {
+      result = ((std::vector< double > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -11457,7 +13319,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_clear(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_clear" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  (arg1)->clear();
+  {
+    try {
+      (arg1)->clear();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11490,7 +13366,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_swap(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DoubleVector_swap" "', argument " "2"" of type '" "std::vector< double > &""'"); 
   }
   arg2 = reinterpret_cast< std::vector< double > * >(argp2);
-  (arg1)->swap(*arg2);
+  {
+    try {
+      (arg1)->swap(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11512,7 +13402,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_get_allocator(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_get_allocator" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = ((std::vector< double > const *)arg1)->get_allocator();
+  {
+    try {
+      result = ((std::vector< double > const *)arg1)->get_allocator();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj((new std::vector< double >::allocator_type(static_cast< const std::vector< double >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_double_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -11534,7 +13438,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_begin(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_begin" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (arg1)->begin();
+  {
+    try {
+      result = (arg1)->begin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11557,7 +13475,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_end(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_end" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (arg1)->end();
+  {
+    try {
+      result = (arg1)->end();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11580,7 +13512,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_rbegin(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_rbegin" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (arg1)->rbegin();
+  {
+    try {
+      result = (arg1)->rbegin();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11603,7 +13549,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_rend(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_rend" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (arg1)->rend();
+  {
+    try {
+      result = (arg1)->rend();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::reverse_iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11626,7 +13586,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleVector__SWIG_2(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_DoubleVector" "', argument " "1"" of type '" "std::vector< double >::size_type""'");
   } 
   arg1 = static_cast< std::vector< double >::size_type >(val1);
-  result = (std::vector< double > *)new std::vector< double >(arg1);
+  {
+    try {
+      result = (std::vector< double > *)new std::vector< double >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -11647,7 +13621,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_pop_back(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_pop_back" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  (arg1)->pop_back();
+  {
+    try {
+      (arg1)->pop_back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11677,7 +13665,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleVector_resize" "', argument " "2"" of type '" "std::vector< double >::size_type""'");
   } 
   arg2 = static_cast< std::vector< double >::size_type >(val2);
-  (arg1)->resize(arg2);
+  {
+    try {
+      (arg1)->resize(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11714,7 +13716,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(s
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "DoubleVector_erase" "', argument " "2"" of type '" "std::vector< double >::iterator""'");
     }
   }
-  result = std_vector_Sl_double_Sg__erase__SWIG_0(arg1,arg2);
+  {
+    try {
+      result = std_vector_Sl_double_Sg__erase__SWIG_0(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11767,7 +13783,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(s
       SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "DoubleVector_erase" "', argument " "3"" of type '" "std::vector< double >::iterator""'");
     }
   }
-  result = std_vector_Sl_double_Sg__erase__SWIG_1(arg1,arg2,arg3);
+  {
+    try {
+      result = std_vector_Sl_double_Sg__erase__SWIG_1(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -11852,7 +13882,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleVector__SWIG_3(PyObject *SWIGUNUSEDPARM(sel
   } 
   temp2 = static_cast< std::vector< double >::value_type >(val2);
   arg2 = &temp2;
-  result = (std::vector< double > *)new std::vector< double >(arg1,(std::vector< double >::value_type const &)*arg2);
+  {
+    try {
+      result = (std::vector< double > *)new std::vector< double >(arg1,(std::vector< double >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -11943,7 +13987,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_push_back(PyObject *SWIGUNUSEDPARM(self)
   } 
   temp2 = static_cast< std::vector< double >::value_type >(val2);
   arg2 = &temp2;
-  (arg1)->push_back((std::vector< double >::value_type const &)*arg2);
+  {
+    try {
+      (arg1)->push_back((std::vector< double >::value_type const &)*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11965,7 +14023,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_front(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_front" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (std::vector< double >::value_type *) &((std::vector< double > const *)arg1)->front();
+  {
+    try {
+      result = (std::vector< double >::value_type *) &((std::vector< double > const *)arg1)->front();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(*result));
   return resultobj;
 fail:
@@ -11987,7 +14059,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_back(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_back" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = (std::vector< double >::value_type *) &((std::vector< double > const *)arg1)->back();
+  {
+    try {
+      result = (std::vector< double >::value_type *) &((std::vector< double > const *)arg1)->back();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(*result));
   return resultobj;
 fail:
@@ -12028,7 +14114,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_assign(PyObject *SWIGUNUSEDPARM(self), P
   } 
   temp3 = static_cast< std::vector< double >::value_type >(val3);
   arg3 = &temp3;
-  (arg1)->assign(arg2,(std::vector< double >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->assign(arg2,(std::vector< double >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12069,7 +14169,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(
   } 
   temp3 = static_cast< std::vector< double >::value_type >(val3);
   arg3 = &temp3;
-  (arg1)->resize(arg2,(std::vector< double >::value_type const &)*arg3);
+  {
+    try {
+      (arg1)->resize(arg2,(std::vector< double >::value_type const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12171,7 +14285,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(
   } 
   temp3 = static_cast< std::vector< double >::value_type >(val3);
   arg3 = &temp3;
-  result = std_vector_Sl_double_Sg__insert__SWIG_0(arg1,arg2,(double const &)*arg3);
+  {
+    try {
+      result = std_vector_Sl_double_Sg__insert__SWIG_0(arg1,arg2,(double const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< double >::iterator & >(result)),
     swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
   return resultobj;
@@ -12228,7 +14356,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(
   } 
   temp4 = static_cast< std::vector< double >::value_type >(val4);
   arg4 = &temp4;
-  std_vector_Sl_double_Sg__insert__SWIG_1(arg1,arg2,arg3,(double const &)*arg4);
+  {
+    try {
+      std_vector_Sl_double_Sg__insert__SWIG_1(arg1,arg2,arg3,(double const &)*arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12322,7 +14464,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_reserve(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleVector_reserve" "', argument " "2"" of type '" "std::vector< double >::size_type""'");
   } 
   arg2 = static_cast< std::vector< double >::size_type >(val2);
-  (arg1)->reserve(arg2);
+  {
+    try {
+      (arg1)->reserve(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12344,7 +14500,21 @@ SWIGINTERN PyObject *_wrap_DoubleVector_capacity(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleVector_capacity" "', argument " "1"" of type '" "std::vector< double > const *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  result = ((std::vector< double > const *)arg1)->capacity();
+  {
+    try {
+      result = ((std::vector< double > const *)arg1)->capacity();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_size_t(static_cast< size_t >(result));
   return resultobj;
 fail:
@@ -12365,7 +14535,21 @@ SWIGINTERN PyObject *_wrap_delete_DoubleVector(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_DoubleVector" "', argument " "1"" of type '" "std::vector< double > *""'"); 
   }
   arg1 = reinterpret_cast< std::vector< double > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12385,7 +14569,21 @@ SWIGINTERN PyObject *_wrap_new_StringVectorx2__SWIG_0(PyObject *SWIGUNUSEDPARM(s
   std::pair< std::vector< std::string >,std::vector< std::string > > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_StringVectorx2")) SWIG_fail;
-  result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >();
+  {
+    try {
+      result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -12420,7 +14618,21 @@ SWIGINTERN PyObject *_wrap_new_StringVectorx2__SWIG_1(PyObject *SWIGUNUSEDPARM(s
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >(arg1,arg2);
+  {
+    try {
+      result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -12447,7 +14659,21 @@ SWIGINTERN PyObject *_wrap_new_StringVectorx2__SWIG_2(PyObject *SWIGUNUSEDPARM(s
     }
     arg1 = ptr;
   }
-  result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >((std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > const &)*arg1);
+  {
+    try {
+      result = (std::pair< std::vector< std::string >,std::vector< std::string > > *)new std::pair< std::vector< std::string >,std::vector< std::string > >((std::pair< std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -12618,7 +14844,21 @@ SWIGINTERN PyObject *_wrap_delete_StringVectorx2(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_StringVectorx2" "', argument " "1"" of type '" "std::pair< std::vector< std::string >,std::vector< std::string > > *""'"); 
   }
   arg1 = reinterpret_cast< std::pair< std::vector< std::string >,std::vector< std::string > > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12638,7 +14878,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrixStringVector__SWIG_0(PyObject *SWIGUN
   std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_DoubleMatrixStringVector")) SWIG_fail;
-  result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >();
+  {
+    try {
+      result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_LIB_LA__MatrixT_double_t_p_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -12671,7 +14925,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrixStringVector__SWIG_1(PyObject *SWIGUN
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >(arg1,arg2);
+  {
+    try {
+      result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_LIB_LA__MatrixT_double_t_p_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -12698,7 +14966,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrixStringVector__SWIG_2(PyObject *SWIGUN
     }
     arg1 = ptr;
   }
-  result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >((std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string,std::allocator< std::string > > > const &)*arg1);
+  {
+    try {
+      result = (std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *)new std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > >((std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string,std::allocator< std::string > > > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_LIB_LA__MatrixT_double_t_p_std__vectorT_std__string_std__allocatorT_std__string_t_t_t, SWIG_POINTER_NEW |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
@@ -12870,7 +15152,21 @@ SWIGINTERN PyObject *_wrap_delete_DoubleMatrixStringVector(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_DoubleMatrixStringVector" "', argument " "1"" of type '" "std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > *""'"); 
   }
   arg1 = reinterpret_cast< std::pair< LIB_LA::DoubleMatrix *,std::vector< std::string > > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12910,7 +15206,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadStoichiometryMatrix(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_loadStoichiometryMatrix" "', argument " "2"" of type '" "LIB_STRUCTURAL::LibStructural::DoubleMatrix &""'"); 
   }
   arg2 = reinterpret_cast< LIB_STRUCTURAL::LibStructural::DoubleMatrix * >(argp2);
-  (arg1)->loadStoichiometryMatrix(*arg2);
+  {
+    try {
+      (arg1)->loadStoichiometryMatrix(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12955,7 +15265,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadSpecies(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_loadSpecies" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > &""'"); 
   }
   arg3 = reinterpret_cast< std::vector< double,std::allocator< double > > * >(argp3);
-  (arg1)->loadSpecies(*arg2,*arg3);
+  {
+    try {
+      (arg1)->loadSpecies(*arg2,*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -12988,7 +15312,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadReactionNames(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_loadReactionNames" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > &""'"); 
   }
   arg2 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp2);
-  (arg1)->loadReactionNames(*arg2);
+  {
+    try {
+      (arg1)->loadReactionNames(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -13021,7 +15359,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadSBMLFromString(PyObject *SWIGUNUSED
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (arg1)->loadSBMLFromString(arg2);
+  {
+    try {
+      result = (arg1)->loadSBMLFromString(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13054,7 +15406,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadSBMLFromFile(PyObject *SWIGUNUSEDPA
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (arg1)->loadSBMLFromFile(arg2);
+  {
+    try {
+      result = (arg1)->loadSBMLFromFile(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13087,7 +15453,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_loadSBMLwithTests(PyObject *SWIGUNUSEDP
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (arg1)->loadSBMLwithTests(arg2);
+  {
+    try {
+      result = (arg1)->loadSBMLwithTests(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13109,7 +15489,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_analyzeWithQR(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_analyzeWithQR" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->analyzeWithQR();
+  {
+    try {
+      result = (arg1)->analyzeWithQR();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13131,7 +15525,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_analyzeWithLU(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_analyzeWithLU" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->analyzeWithLU();
+  {
+    try {
+      result = (arg1)->analyzeWithLU();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13153,7 +15561,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_analyzeWithLUandRunTests(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_analyzeWithLUandRunTests" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->analyzeWithLUandRunTests();
+  {
+    try {
+      result = (arg1)->analyzeWithLUandRunTests();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13175,7 +15597,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_analyzeWithFullyPivotedLU(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_analyzeWithFullyPivotedLU" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->analyzeWithFullyPivotedLU();
+  {
+    try {
+      result = (arg1)->analyzeWithFullyPivotedLU();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13197,7 +15633,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_analyzeWithFullyPivotedLUwithTests(PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_analyzeWithFullyPivotedLUwithTests" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->analyzeWithFullyPivotedLUwithTests();
+  {
+    try {
+      result = (arg1)->analyzeWithFullyPivotedLUwithTests();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13219,7 +15669,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getL0Matrix(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getL0Matrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getL0Matrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getL0Matrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13241,7 +15705,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNrMatrix(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNrMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNrMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNrMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13263,7 +15741,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedNrMatrix(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedNrMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedNrMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedNrMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13285,7 +15777,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getColumnReorderedNrMatrix(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getColumnReorderedNrMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getColumnReorderedNrMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getColumnReorderedNrMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13307,7 +15813,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNICMatrix(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNICMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNICMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNICMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13329,7 +15849,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNDCMatrix(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNDCMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNDCMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getNDCMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13351,7 +15885,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getN0Matrix(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getN0Matrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getN0Matrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getN0Matrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13373,7 +15921,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getLinkMatrix(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getLinkMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getLinkMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getLinkMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13395,7 +15957,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getK0Matrix(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getK0Matrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getK0Matrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getK0Matrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13417,7 +15993,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getKMatrix(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getKMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getKMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getKMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13439,7 +16029,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getGammaMatrix(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getGammaMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getGammaMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getGammaMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13473,7 +16077,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getGammaMatrixGJ(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "LibStructural_getGammaMatrixGJ" "', argument " "2"" of type '" "LIB_STRUCTURAL::LibStructural::DoubleMatrix &""'"); 
   }
   arg2 = reinterpret_cast< LIB_STRUCTURAL::LibStructural::DoubleMatrix * >(argp2);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getGammaMatrixGJ(*arg2);
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getGammaMatrixGJ(*arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13495,7 +16113,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getStoichiometryMatrix(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getStoichiometryMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getStoichiometryMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getStoichiometryMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13517,7 +16149,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReorderedStoichiometryMatrix(PyObjec
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedStoichiometryMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getReorderedStoichiometryMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getReorderedStoichiometryMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13539,7 +16185,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrix(Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrix" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedStoichiometryMatrix();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural::DoubleMatrix *)(arg1)->getFullyReorderedStoichiometryMatrix();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -13561,7 +16221,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReorderedSpecies(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getReorderedSpecies();
+  {
+    try {
+      result = (arg1)->getReorderedSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13583,7 +16257,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getSpecies(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getSpecies();
+  {
+    try {
+      result = (arg1)->getSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13605,7 +16293,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReorderedSpeciesNamesList(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedSpeciesNamesList" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getReorderedSpeciesNamesList();
+  {
+    try {
+      result = (arg1)->getReorderedSpeciesNamesList();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13627,7 +16329,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getIndependentSpecies(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getIndependentSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getIndependentSpecies();
+  {
+    try {
+      result = (arg1)->getIndependentSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13649,7 +16365,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getIndependentSpeciesNamesList(PyObject
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getIndependentSpeciesNamesList" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getIndependentSpeciesNamesList();
+  {
+    try {
+      result = (arg1)->getIndependentSpeciesNamesList();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13671,7 +16401,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getDependentSpecies(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getDependentSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getDependentSpecies();
+  {
+    try {
+      result = (arg1)->getDependentSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13693,7 +16437,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getDependentSpeciesNamesList(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getDependentSpeciesNamesList" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getDependentSpeciesNamesList();
+  {
+    try {
+      result = (arg1)->getDependentSpeciesNamesList();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13715,7 +16473,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReactions(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReactions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getReactions();
+  {
+    try {
+      result = (arg1)->getReactions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13737,7 +16509,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getIndependentReactionIds(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getIndependentReactionIds" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getIndependentReactionIds();
+  {
+    try {
+      result = (arg1)->getIndependentReactionIds();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13759,7 +16545,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getDependentReactionIds(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getDependentReactionIds" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getDependentReactionIds();
+  {
+    try {
+      result = (arg1)->getDependentReactionIds();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13781,7 +16581,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReactionsNamesList(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReactionsNamesList" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getReactionsNamesList();
+  {
+    try {
+      result = (arg1)->getReactionsNamesList();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13803,7 +16617,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReorderedReactions(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedReactions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getReorderedReactions();
+  {
+    try {
+      result = (arg1)->getReorderedReactions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13825,7 +16653,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getConservedLaws(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getConservedLaws" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getConservedLaws();
+  {
+    try {
+      result = (arg1)->getConservedLaws();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13847,7 +16689,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getConservedSums(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getConservedSums" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getConservedSums();
+  {
+    try {
+      result = (arg1)->getConservedSums();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<double,std::allocator< double > > >(result));
   return resultobj;
 fail:
@@ -13869,7 +16725,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getInitialConditions(PyObject *SWIGUNUS
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getInitialConditions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getInitialConditions();
+  {
+    try {
+      result = (arg1)->getInitialConditions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::pair< std::string,double >,std::allocator< std::pair< std::string,double > > > >(result));
   return resultobj;
 fail:
@@ -13891,7 +16761,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_validateStructuralMatrices(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_validateStructuralMatrices" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->validateStructuralMatrices();
+  {
+    try {
+      result = (arg1)->validateStructuralMatrices();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::vector<std::string,std::allocator< std::string > > >(result));
   return resultobj;
 fail:
@@ -13913,7 +16797,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getTestDetails(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getTestDetails" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getTestDetails();
+  {
+    try {
+      result = (arg1)->getTestDetails();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13935,7 +16833,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getModelName(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getModelName" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (arg1)->getModelName();
+  {
+    try {
+      result = (arg1)->getModelName();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
@@ -13957,7 +16869,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumSpecies(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumSpecies();
+  {
+    try {
+      result = (int)(arg1)->getNumSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -13979,7 +16905,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumIndSpecies(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumIndSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumIndSpecies();
+  {
+    try {
+      result = (int)(arg1)->getNumIndSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14001,7 +16941,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumDepSpecies(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumDepSpecies" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumDepSpecies();
+  {
+    try {
+      result = (int)(arg1)->getNumDepSpecies();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14023,7 +16977,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumReactions(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumReactions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumReactions();
+  {
+    try {
+      result = (int)(arg1)->getNumReactions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14045,7 +17013,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumIndReactions(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumIndReactions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumIndReactions();
+  {
+    try {
+      result = (int)(arg1)->getNumIndReactions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14067,7 +17049,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNumDepReactions(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNumDepReactions" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getNumDepReactions();
+  {
+    try {
+      result = (int)(arg1)->getNumDepReactions();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14089,7 +17085,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getRank(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getRank" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (int)(arg1)->getRank();
+  {
+    try {
+      result = (int)(arg1)->getRank();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14111,7 +17121,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNmatrixSparsity(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNmatrixSparsity" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (double)(arg1)->getNmatrixSparsity();
+  {
+    try {
+      result = (double)(arg1)->getNmatrixSparsity();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -14141,7 +17165,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_setTolerance(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LibStructural_setTolerance" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
-  (arg1)->setTolerance(arg2);
+  {
+    try {
+      (arg1)->setTolerance(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14163,7 +17201,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getTolerance(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getTolerance" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = (double)(arg1)->getTolerance();
+  {
+    try {
+      result = (double)(arg1)->getTolerance();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -14176,7 +17228,21 @@ SWIGINTERN PyObject *_wrap_new_LibStructural(PyObject *SWIGUNUSEDPARM(self), PyO
   LIB_STRUCTURAL::LibStructural *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_LibStructural")) SWIG_fail;
-  result = (LIB_STRUCTURAL::LibStructural *)new LIB_STRUCTURAL::LibStructural();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural *)new LIB_STRUCTURAL::LibStructural();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -14189,7 +17255,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getInstance(PyObject *SWIGUNUSEDPARM(se
   LIB_STRUCTURAL::LibStructural *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":LibStructural_getInstance")) SWIG_fail;
-  result = (LIB_STRUCTURAL::LibStructural *)LIB_STRUCTURAL::LibStructural::getInstance();
+  {
+    try {
+      result = (LIB_STRUCTURAL::LibStructural *)LIB_STRUCTURAL::LibStructural::getInstance();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_STRUCTURAL__LibStructural, 0 |  0 );
   return resultobj;
 fail:
@@ -14231,7 +17311,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_findPositiveGammaMatrix(PyObject *SWIGU
     arg3 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = LIB_STRUCTURAL_LibStructural_findPositiveGammaMatrix(arg1,arg2,arg3);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_findPositiveGammaMatrix(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<LIB_LA::Matrix< double >*,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14253,7 +17347,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getColumnReorderedNrMatrixLabels(PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getColumnReorderedNrMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getColumnReorderedNrMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getColumnReorderedNrMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14275,7 +17383,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getGammaMatrixLabels(PyObject *SWIGUNUS
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getGammaMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getGammaMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getGammaMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14297,7 +17419,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getK0MatrixLabels(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getK0MatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getK0MatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getK0MatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14319,7 +17455,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getKMatrixLabels(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getKMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getKMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getKMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14341,7 +17491,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getL0MatrixLabels(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getL0MatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getL0MatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getL0MatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14363,7 +17527,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getLinkMatrixLabels(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getLinkMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getLinkMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getLinkMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14385,7 +17563,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getN0MatrixLabels(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getN0MatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getN0MatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getN0MatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14407,7 +17599,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNDCMatrixLabels(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNDCMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getNDCMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getNDCMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14429,7 +17635,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNICMatrixLabels(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNICMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getNICMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getNICMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14451,7 +17671,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getNrMatrixLabels(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getNrMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getNrMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getNrMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14473,7 +17707,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getStoichiometryMatrixLabels(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getStoichiometryMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getStoichiometryMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14495,7 +17743,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getFullyReorderedStoichiometryMatrixLab
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getFullyReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getFullyReorderedStoichiometryMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getFullyReorderedStoichiometryMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14517,7 +17779,21 @@ SWIGINTERN PyObject *_wrap_LibStructural_getReorderedStoichiometryMatrixLabels(P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LibStructural_getReorderedStoichiometryMatrixLabels" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  result = LIB_STRUCTURAL_LibStructural_getReorderedStoichiometryMatrixLabels(arg1);
+  {
+    try {
+      result = LIB_STRUCTURAL_LibStructural_getReorderedStoichiometryMatrixLabels(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = swig::from(static_cast< std::pair<std::vector< std::string,std::allocator< std::string > >,std::vector< std::string,std::allocator< std::string > > > >(result));
   return resultobj;
 fail:
@@ -14538,7 +17814,21 @@ SWIGINTERN PyObject *_wrap_delete_LibStructural(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_LibStructural" "', argument " "1"" of type '" "LIB_STRUCTURAL::LibStructural *""'"); 
   }
   arg1 = reinterpret_cast< LIB_STRUCTURAL::LibStructural * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14567,7 +17857,21 @@ SWIGINTERN PyObject *_wrap_new_complexArray(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_complexArray" "', argument " "1"" of type '" "size_t""'");
   } 
   arg1 = static_cast< size_t >(val1);
-  result = (complexArray *)new_complexArray(arg1);
+  {
+    try {
+      result = (complexArray *)new_complexArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_complexArray, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -14588,7 +17892,21 @@ SWIGINTERN PyObject *_wrap_delete_complexArray(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_complexArray" "', argument " "1"" of type '" "complexArray *""'"); 
   }
   arg1 = reinterpret_cast< complexArray * >(argp1);
-  delete_complexArray(arg1);
+  {
+    try {
+      delete_complexArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14619,7 +17937,21 @@ SWIGINTERN PyObject *_wrap_complexArray___getitem__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "complexArray___getitem__" "', argument " "2"" of type '" "size_t""'");
   } 
   arg2 = static_cast< size_t >(val2);
-  result = complexArray___getitem__(arg1,arg2);
+  {
+    try {
+      result = complexArray___getitem__(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj((new LIB_LA::Complex(static_cast< const LIB_LA::Complex& >(result))), SWIGTYPE_p_LIB_LA__Complex, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -14666,7 +17998,21 @@ SWIGINTERN PyObject *_wrap_complexArray___setitem__(PyObject *SWIGUNUSEDPARM(sel
       if (SWIG_IsNewObj(res3)) delete temp;
     }
   }
-  complexArray___setitem__(arg1,arg2,arg3);
+  {
+    try {
+      complexArray___setitem__(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14688,7 +18034,21 @@ SWIGINTERN PyObject *_wrap_complexArray_cast(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "complexArray_cast" "', argument " "1"" of type '" "complexArray *""'"); 
   }
   arg1 = reinterpret_cast< complexArray * >(argp1);
-  result = (LIB_LA::Complex *)complexArray_cast(arg1);
+  {
+    try {
+      result = (LIB_LA::Complex *)complexArray_cast(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -14710,7 +18070,21 @@ SWIGINTERN PyObject *_wrap_complexArray_frompointer(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "complexArray_frompointer" "', argument " "1"" of type '" "LIB_LA::Complex *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Complex * >(argp1);
-  result = (complexArray *)complexArray_frompointer(arg1);
+  {
+    try {
+      result = (complexArray *)complexArray_frompointer(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_complexArray, 0 |  0 );
   return resultobj;
 fail:
@@ -14739,7 +18113,21 @@ SWIGINTERN PyObject *_wrap_new_doubleArray(PyObject *SWIGUNUSEDPARM(self), PyObj
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_doubleArray" "', argument " "1"" of type '" "size_t""'");
   } 
   arg1 = static_cast< size_t >(val1);
-  result = (doubleArray *)new_doubleArray(arg1);
+  {
+    try {
+      result = (doubleArray *)new_doubleArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_doubleArray, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -14760,7 +18148,21 @@ SWIGINTERN PyObject *_wrap_delete_doubleArray(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_doubleArray" "', argument " "1"" of type '" "doubleArray *""'"); 
   }
   arg1 = reinterpret_cast< doubleArray * >(argp1);
-  delete_doubleArray(arg1);
+  {
+    try {
+      delete_doubleArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14791,7 +18193,21 @@ SWIGINTERN PyObject *_wrap_doubleArray___getitem__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "doubleArray___getitem__" "', argument " "2"" of type '" "size_t""'");
   } 
   arg2 = static_cast< size_t >(val2);
-  result = (double)doubleArray___getitem__(arg1,arg2);
+  {
+    try {
+      result = (double)doubleArray___getitem__(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -14830,7 +18246,21 @@ SWIGINTERN PyObject *_wrap_doubleArray___setitem__(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "doubleArray___setitem__" "', argument " "3"" of type '" "double""'");
   } 
   arg3 = static_cast< double >(val3);
-  doubleArray___setitem__(arg1,arg2,arg3);
+  {
+    try {
+      doubleArray___setitem__(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14852,7 +18282,21 @@ SWIGINTERN PyObject *_wrap_doubleArray_cast(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "doubleArray_cast" "', argument " "1"" of type '" "doubleArray *""'"); 
   }
   arg1 = reinterpret_cast< doubleArray * >(argp1);
-  result = (double *)doubleArray_cast(arg1);
+  {
+    try {
+      result = (double *)doubleArray_cast(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -14874,7 +18318,21 @@ SWIGINTERN PyObject *_wrap_doubleArray_frompointer(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "doubleArray_frompointer" "', argument " "1"" of type '" "double *""'"); 
   }
   arg1 = reinterpret_cast< double * >(argp1);
-  result = (doubleArray *)doubleArray_frompointer(arg1);
+  {
+    try {
+      result = (doubleArray *)doubleArray_frompointer(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_doubleArray, 0 |  0 );
   return resultobj;
 fail:
@@ -14903,7 +18361,21 @@ SWIGINTERN PyObject *_wrap_new_intArray(PyObject *SWIGUNUSEDPARM(self), PyObject
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_intArray" "', argument " "1"" of type '" "size_t""'");
   } 
   arg1 = static_cast< size_t >(val1);
-  result = (intArray *)new_intArray(arg1);
+  {
+    try {
+      result = (intArray *)new_intArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_intArray, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -14924,7 +18396,21 @@ SWIGINTERN PyObject *_wrap_delete_intArray(PyObject *SWIGUNUSEDPARM(self), PyObj
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_intArray" "', argument " "1"" of type '" "intArray *""'"); 
   }
   arg1 = reinterpret_cast< intArray * >(argp1);
-  delete_intArray(arg1);
+  {
+    try {
+      delete_intArray(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14955,7 +18441,21 @@ SWIGINTERN PyObject *_wrap_intArray___getitem__(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "intArray___getitem__" "', argument " "2"" of type '" "size_t""'");
   } 
   arg2 = static_cast< size_t >(val2);
-  result = (int)intArray___getitem__(arg1,arg2);
+  {
+    try {
+      result = (int)intArray___getitem__(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -14994,7 +18494,21 @@ SWIGINTERN PyObject *_wrap_intArray___setitem__(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "intArray___setitem__" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  intArray___setitem__(arg1,arg2,arg3);
+  {
+    try {
+      intArray___setitem__(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -15016,7 +18530,21 @@ SWIGINTERN PyObject *_wrap_intArray_cast(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "intArray_cast" "', argument " "1"" of type '" "intArray *""'"); 
   }
   arg1 = reinterpret_cast< intArray * >(argp1);
-  result = (int *)intArray_cast(arg1);
+  {
+    try {
+      result = (int *)intArray_cast(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -15038,7 +18566,21 @@ SWIGINTERN PyObject *_wrap_intArray_frompointer(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "intArray_frompointer" "', argument " "1"" of type '" "int *""'"); 
   }
   arg1 = reinterpret_cast< int * >(argp1);
-  result = (intArray *)intArray_frompointer(arg1);
+  {
+    try {
+      result = (intArray *)intArray_frompointer(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_intArray, 0 |  0 );
   return resultobj;
 fail:
@@ -15232,7 +18774,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_DoubleMatrix" "', argument " "2"" of type '" "unsigned int""'");
   } 
   arg2 = static_cast< unsigned int >(val2);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(arg1,arg2);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15254,7 +18810,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_DoubleMatrix" "', argument " "1"" of type '" "unsigned int""'");
   } 
   arg1 = static_cast< unsigned int >(val1);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15267,7 +18837,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_2(PyObject *SWIGUNUSEDPARM(sel
   LIB_LA::Matrix< double > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_DoubleMatrix")) SWIG_fail;
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >();
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15292,7 +18876,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_3(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_DoubleMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< double > const &""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >((LIB_LA::Matrix< double > const &)*arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >((LIB_LA::Matrix< double > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15344,7 +18942,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_4(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_DoubleMatrix" "', argument " "4"" of type '" "bool""'");
   } 
   arg4 = static_cast< bool >(val4);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3,arg4);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15387,7 +18999,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_5(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_DoubleMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15430,7 +19056,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_6(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_DoubleMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15470,7 +19110,21 @@ SWIGINTERN PyObject *_wrap_new_DoubleMatrix__SWIG_7(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_DoubleMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >((double const **)arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)new LIB_LA::Matrix< double >((double const **)arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -15645,7 +19299,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_getArray(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_getArray" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (double *)(arg1)->getArray();
+  {
+    try {
+      result = (double *)(arg1)->getArray();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -15676,7 +19344,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_getCopy__SWIG_0(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DoubleMatrix_getCopy" "', argument " "2"" of type '" "bool""'");
   } 
   arg2 = static_cast< bool >(val2);
-  result = (double *)(arg1)->getCopy(arg2);
+  {
+    try {
+      result = (double *)(arg1)->getCopy(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -15698,7 +19380,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_getCopy__SWIG_1(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_getCopy" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (double *)(arg1)->getCopy();
+  {
+    try {
+      result = (double *)(arg1)->getCopy();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -15793,7 +19489,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_initializeFrom2DMatrix(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DoubleMatrix_initializeFrom2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -15841,7 +19551,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_initializeFromConst2DMatrix(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DoubleMatrix_initializeFromConst2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFromConst2DMatrix((double const **)arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFromConst2DMatrix((double const **)arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -15862,7 +19586,21 @@ SWIGINTERN PyObject *_wrap_delete_DoubleMatrix(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_DoubleMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -15908,7 +19646,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_get2DMatrix(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DoubleMatrix_get2DMatrix" "', argument " "3"" of type '" "int &""'"); 
   }
   arg3 = reinterpret_cast< int * >(argp3);
-  result = (double **)(arg1)->get2DMatrix(*arg2,*arg3);
+  {
+    try {
+      result = (double **)(arg1)->get2DMatrix(*arg2,*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -15947,7 +19699,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_swapRows(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleMatrix_swapRows" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapRows(arg2,arg3);
+  {
+    try {
+      (arg1)->swapRows(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -15986,7 +19752,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_swapCols(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleMatrix_swapCols" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapCols(arg2,arg3);
+  {
+    try {
+      (arg1)->swapCols(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -16025,7 +19805,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_resize(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleMatrix_resize" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->resize(arg2,arg3);
+  {
+    try {
+      (arg1)->resize(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -16047,7 +19841,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_getTranspose(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_getTranspose" "', argument " "1"" of type '" "LIB_LA::Matrix< double > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (LIB_LA::Matrix< double > *)(arg1)->getTranspose();
+  {
+    try {
+      result = (LIB_LA::Matrix< double > *)(arg1)->getTranspose();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_double_t, 0 |  0 );
   return resultobj;
 fail:
@@ -16069,7 +19877,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_size(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_size" "', argument " "1"" of type '" "LIB_LA::Matrix< double > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->size();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -16091,7 +19913,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_numRows(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_numRows" "', argument " "1"" of type '" "LIB_LA::Matrix< double > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->numRows();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->numRows();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -16113,7 +19949,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_numCols(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DoubleMatrix_numCols" "', argument " "1"" of type '" "LIB_LA::Matrix< double > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< double > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->numCols();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< double > const *)arg1)->numCols();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -16157,7 +20007,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix___call____SWIG_0(PyObject *SWIGUNUSEDPAR
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< double >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< double >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_double, 0 |  0 );
   return resultobj;
 fail:
@@ -16201,7 +20065,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix___call____SWIG_1(PyObject *SWIGUNUSEDPAR
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< double >::_ElementType *) &((LIB_LA::Matrix< double > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< double >::_ElementType *) &((LIB_LA::Matrix< double > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(*result));
   return resultobj;
 fail:
@@ -16303,7 +20181,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_get(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "DoubleMatrix_get" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  result = (double)LIB_LA_Matrix_Sl_double_Sg__get(arg1,arg2,arg3);
+  {
+    try {
+      result = (double)LIB_LA_Matrix_Sl_double_Sg__get(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -16351,7 +20243,21 @@ SWIGINTERN PyObject *_wrap_DoubleMatrix_set(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DoubleMatrix_set" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = static_cast< double >(val4);
-  LIB_LA_Matrix_Sl_double_Sg__set(arg1,arg2,arg3,arg4);
+  {
+    try {
+      LIB_LA_Matrix_Sl_double_Sg__set(arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -16545,7 +20451,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_IntMatrix" "', argument " "2"" of type '" "unsigned int""'");
   } 
   arg2 = static_cast< unsigned int >(val2);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(arg1,arg2);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16567,7 +20487,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_1(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_IntMatrix" "', argument " "1"" of type '" "unsigned int""'");
   } 
   arg1 = static_cast< unsigned int >(val1);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16580,7 +20514,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_2(PyObject *SWIGUNUSEDPARM(self),
   LIB_LA::Matrix< int > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_IntMatrix")) SWIG_fail;
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >();
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16605,7 +20553,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_3(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_IntMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< int > const &""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >((LIB_LA::Matrix< int > const &)*arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >((LIB_LA::Matrix< int > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16657,7 +20619,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_4(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_IntMatrix" "', argument " "4"" of type '" "bool""'");
   } 
   arg4 = static_cast< bool >(val4);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3,arg4);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16700,7 +20676,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_5(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_IntMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16743,7 +20733,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_6(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_IntMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16783,7 +20787,21 @@ SWIGINTERN PyObject *_wrap_new_IntMatrix__SWIG_7(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_IntMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >((int const **)arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)new LIB_LA::Matrix< int >((int const **)arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -16958,7 +20976,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_getArray(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_getArray" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (int *)(arg1)->getArray();
+  {
+    try {
+      result = (int *)(arg1)->getArray();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -16989,7 +21021,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_getCopy__SWIG_0(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntMatrix_getCopy" "', argument " "2"" of type '" "bool""'");
   } 
   arg2 = static_cast< bool >(val2);
-  result = (int *)(arg1)->getCopy(arg2);
+  {
+    try {
+      result = (int *)(arg1)->getCopy(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -17011,7 +21057,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_getCopy__SWIG_1(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_getCopy" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (int *)(arg1)->getCopy();
+  {
+    try {
+      result = (int *)(arg1)->getCopy();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -17106,7 +21166,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_initializeFrom2DMatrix(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "IntMatrix_initializeFrom2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17154,7 +21228,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_initializeFromConst2DMatrix(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "IntMatrix_initializeFromConst2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFromConst2DMatrix((int const **)arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFromConst2DMatrix((int const **)arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17175,7 +21263,21 @@ SWIGINTERN PyObject *_wrap_delete_IntMatrix(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_IntMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17221,7 +21323,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_get2DMatrix(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IntMatrix_get2DMatrix" "', argument " "3"" of type '" "int &""'"); 
   }
   arg3 = reinterpret_cast< int * >(argp3);
-  result = (int **)(arg1)->get2DMatrix(*arg2,*arg3);
+  {
+    try {
+      result = (int **)(arg1)->get2DMatrix(*arg2,*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -17260,7 +21376,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_swapRows(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntMatrix_swapRows" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapRows(arg2,arg3);
+  {
+    try {
+      (arg1)->swapRows(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17299,7 +21429,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_swapCols(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntMatrix_swapCols" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapCols(arg2,arg3);
+  {
+    try {
+      (arg1)->swapCols(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17338,7 +21482,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_resize(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntMatrix_resize" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->resize(arg2,arg3);
+  {
+    try {
+      (arg1)->resize(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17360,7 +21518,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_getTranspose(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_getTranspose" "', argument " "1"" of type '" "LIB_LA::Matrix< int > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (LIB_LA::Matrix< int > *)(arg1)->getTranspose();
+  {
+    try {
+      result = (LIB_LA::Matrix< int > *)(arg1)->getTranspose();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_int_t, 0 |  0 );
   return resultobj;
 fail:
@@ -17382,7 +21554,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_size(PyObject *SWIGUNUSEDPARM(self), PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_size" "', argument " "1"" of type '" "LIB_LA::Matrix< int > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->size();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -17404,7 +21590,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_numRows(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_numRows" "', argument " "1"" of type '" "LIB_LA::Matrix< int > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->numRows();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->numRows();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -17426,7 +21626,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_numCols(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntMatrix_numCols" "', argument " "1"" of type '" "LIB_LA::Matrix< int > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< int > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->numCols();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< int > const *)arg1)->numCols();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -17470,7 +21684,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix___call____SWIG_0(PyObject *SWIGUNUSEDPARM(s
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< int >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< int >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
   return resultobj;
 fail:
@@ -17514,7 +21742,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix___call____SWIG_1(PyObject *SWIGUNUSEDPARM(s
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< int >::_ElementType *) &((LIB_LA::Matrix< int > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< int >::_ElementType *) &((LIB_LA::Matrix< int > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(*result));
   return resultobj;
 fail:
@@ -17616,7 +21858,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_get(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntMatrix_get" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  result = (int)LIB_LA_Matrix_Sl_int_Sg__get(arg1,arg2,arg3);
+  {
+    try {
+      result = (int)LIB_LA_Matrix_Sl_int_Sg__get(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -17664,7 +21920,21 @@ SWIGINTERN PyObject *_wrap_IntMatrix_set(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "IntMatrix_set" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  LIB_LA_Matrix_Sl_int_Sg__set(arg1,arg2,arg3,arg4);
+  {
+    try {
+      LIB_LA_Matrix_Sl_int_Sg__set(arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -17858,7 +22128,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_0(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_ComplexMatrix" "', argument " "2"" of type '" "unsigned int""'");
   } 
   arg2 = static_cast< unsigned int >(val2);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(arg1,arg2);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(arg1,arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -17880,7 +22164,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_1(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_ComplexMatrix" "', argument " "1"" of type '" "unsigned int""'");
   } 
   arg1 = static_cast< unsigned int >(val1);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -17893,7 +22191,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_2(PyObject *SWIGUNUSEDPARM(se
   LIB_LA::Matrix< LIB_LA::Complex > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)":new_ComplexMatrix")) SWIG_fail;
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >();
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -17918,7 +22230,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_3(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ComplexMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > const &""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >((LIB_LA::Matrix< LIB_LA::Complex > const &)*arg1);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >((LIB_LA::Matrix< LIB_LA::Complex > const &)*arg1);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -17970,7 +22296,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_4(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_ComplexMatrix" "', argument " "4"" of type '" "bool""'");
   } 
   arg4 = static_cast< bool >(val4);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3,arg4);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -18013,7 +22353,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_5(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_ComplexMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -18056,7 +22410,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_6(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_ComplexMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >(*arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -18096,7 +22464,21 @@ SWIGINTERN PyObject *_wrap_new_ComplexMatrix__SWIG_7(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_ComplexMatrix" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >((LIB_LA::Complex const **)arg1,arg2,arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)new LIB_LA::Matrix< LIB_LA::Complex >((LIB_LA::Complex const **)arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -18271,7 +22653,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_getArray(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_getArray" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (LIB_LA::Complex *)(arg1)->getArray();
+  {
+    try {
+      result = (LIB_LA::Complex *)(arg1)->getArray();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18302,7 +22698,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_getCopy__SWIG_0(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ComplexMatrix_getCopy" "', argument " "2"" of type '" "bool""'");
   } 
   arg2 = static_cast< bool >(val2);
-  result = (LIB_LA::Complex *)(arg1)->getCopy(arg2);
+  {
+    try {
+      result = (LIB_LA::Complex *)(arg1)->getCopy(arg2);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18324,7 +22734,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_getCopy__SWIG_1(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_getCopy" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (LIB_LA::Complex *)(arg1)->getCopy();
+  {
+    try {
+      result = (LIB_LA::Complex *)(arg1)->getCopy();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18419,7 +22843,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_initializeFrom2DMatrix(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "ComplexMatrix_initializeFrom2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFrom2DMatrix(*arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18467,7 +22905,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_initializeFromConst2DMatrix(PyObject *S
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "ComplexMatrix_initializeFromConst2DMatrix" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
-  (arg1)->initializeFromConst2DMatrix((LIB_LA::Complex const **)arg2,arg3,arg4);
+  {
+    try {
+      (arg1)->initializeFromConst2DMatrix((LIB_LA::Complex const **)arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18488,7 +22940,21 @@ SWIGINTERN PyObject *_wrap_delete_ComplexMatrix(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ComplexMatrix" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  delete arg1;
+  {
+    try {
+      delete arg1;
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18534,7 +23000,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_get2DMatrix(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ComplexMatrix_get2DMatrix" "', argument " "3"" of type '" "int &""'"); 
   }
   arg3 = reinterpret_cast< int * >(argp3);
-  result = (LIB_LA::Complex **)(arg1)->get2DMatrix(*arg2,*arg3);
+  {
+    try {
+      result = (LIB_LA::Complex **)(arg1)->get2DMatrix(*arg2,*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18573,7 +23053,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_swapRows(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ComplexMatrix_swapRows" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapRows(arg2,arg3);
+  {
+    try {
+      (arg1)->swapRows(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18612,7 +23106,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_swapCols(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ComplexMatrix_swapCols" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->swapCols(arg2,arg3);
+  {
+    try {
+      (arg1)->swapCols(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18651,7 +23159,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_resize(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ComplexMatrix_resize" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  (arg1)->resize(arg2,arg3);
+  {
+    try {
+      (arg1)->resize(arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -18673,7 +23195,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_getTranspose(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_getTranspose" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (LIB_LA::Matrix< LIB_LA::Complex > *)(arg1)->getTranspose();
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex > *)(arg1)->getTranspose();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__MatrixT_LIB_LA__Complex_t, 0 |  0 );
   return resultobj;
 fail:
@@ -18695,7 +23231,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_size(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_size" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->size();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->size();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -18717,7 +23267,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_numRows(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_numRows" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->numRows();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->numRows();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -18739,7 +23303,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_numCols(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComplexMatrix_numCols" "', argument " "1"" of type '" "LIB_LA::Matrix< LIB_LA::Complex > const *""'"); 
   }
   arg1 = reinterpret_cast< LIB_LA::Matrix< LIB_LA::Complex > * >(argp1);
-  result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->numCols();
+  {
+    try {
+      result = (unsigned int)((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->numCols();
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
@@ -18783,7 +23361,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix___call____SWIG_0(PyObject *SWIGUNUSEDPA
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< LIB_LA::Complex >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex >::_ElementType *) &(arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18827,7 +23419,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix___call____SWIG_1(PyObject *SWIGUNUSEDPA
   } 
   temp3 = static_cast< unsigned int >(val3);
   arg3 = &temp3;
-  result = (LIB_LA::Matrix< LIB_LA::Complex >::_ElementType *) &((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+  {
+    try {
+      result = (LIB_LA::Matrix< LIB_LA::Complex >::_ElementType *) &((LIB_LA::Matrix< LIB_LA::Complex > const *)arg1)->operator ()((unsigned int const &)*arg2,(unsigned int const &)*arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LIB_LA__Complex, 0 |  0 );
   return resultobj;
 fail:
@@ -18929,7 +23535,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_get(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ComplexMatrix_get" "', argument " "3"" of type '" "unsigned int""'");
   } 
   arg3 = static_cast< unsigned int >(val3);
-  result = LIB_LA_Matrix_Sl_LIB_LA_Complex_Sg__get(arg1,arg2,arg3);
+  {
+    try {
+      result = LIB_LA_Matrix_Sl_LIB_LA_Complex_Sg__get(arg1,arg2,arg3);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_NewPointerObj((new LIB_LA::Complex(static_cast< const LIB_LA::Complex& >(result))), SWIGTYPE_p_LIB_LA__Complex, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -18985,7 +23605,21 @@ SWIGINTERN PyObject *_wrap_ComplexMatrix_set(PyObject *SWIGUNUSEDPARM(self), PyO
       if (SWIG_IsNewObj(res4)) delete temp;
     }
   }
-  LIB_LA_Matrix_Sl_LIB_LA_Complex_Sg__set(arg1,arg2,arg3,arg4);
+  {
+    try {
+      LIB_LA_Matrix_Sl_LIB_LA_Complex_Sg__set(arg1,arg2,arg3,arg4);
+    } catch (const LIB_LA::ApplicationException& e) {
+      SWIG_exception(SWIG_RuntimeError, "app error");
+    } catch (LIB_LA::ApplicationException* e) {
+      std::string msg = e->getDetailedMessage();
+      delete e;
+      SWIG_exception(SWIG_RuntimeError, msg.c_str());
+    } catch (const std::exception& e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+  }
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:

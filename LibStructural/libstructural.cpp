@@ -41,23 +41,15 @@ using namespace std;
 // ----------------------------------------------------------------------------------------	
 string LibStructural::loadSBMLFromString(string sSBML)
 {	
-	try
-	{
-		DELETE_IF_NON_NULL(_Model);
-		_Model = new SBMLmodel(sSBML);
-		return analyzeWithQR();
-	}
-	//catch (ApplicationException m)
-	catch (...)
-	{
-		//std::string s = m.getDetailedMessage();
-		return "";
-	}
+    DELETE_IF_NON_NULL(_Model);
+    _Model = new SBMLmodel(sSBML);
+    return analyzeWithQR();
 }
 
 string LibStructural::loadSBMLFromFile(string sFileName)
 {
-	DELETE_IF_NON_NULL(_Model);		_Model = SBMLmodel::FromFile(sFileName);
+	DELETE_IF_NON_NULL(_Model);		
+	_Model = SBMLmodel::FromFile(sFileName);
 	return analyzeWithQR();
 }
 
@@ -1095,9 +1087,18 @@ LibStructural::DoubleMatrix* LibStructural::getNrMatrix()
 
 LibStructural::DoubleMatrix* LibStructural::getFullyReorderedNrMatrix()
 {
-	getFullyReorderedStoichiometryMatrix();
-	computeNrMatrix();
-	return _Nr;
+	DoubleMatrix* NFullReordered = getFullyReorderedStoichiometryMatrix();
+	DoubleMatrix* _NrNew = new DoubleMatrix(_NumIndependent, _NumCols);
+
+	for (int i = 0; i < _NumIndependent; i++)
+	{
+		for (int j = 0; j < _NumCols; j++)
+		{
+			(*_NrNew)(i, j) = (*NFullReordered)(spVec[i], j);
+		}
+	}
+	DELETE_IF_NON_NULL (NFullReordered);
+	return _NrNew;
 }
 
 void LibStructural::getNrMatrixLabels(vector< string > &oRows, vector< string > &oCols )
